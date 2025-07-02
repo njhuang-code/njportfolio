@@ -1,0 +1,15 @@
+// base style
+@import 'reset.scss';
+@import 'variable.scss';
+
+@import 'layout.scss';
+
+// main style
+@import 'main.scss';
+
+// animation style
+@import 'animate.scss';
+
+// device style
+@import 'rwd-pc-mid.scss';
+@import 'rwd-mobile.scss';

@@ -1,0 +1,154 @@
+@media (max-width: ($mbrwd-breakpoint* 1px)) {
+  // kv style
+  .kv-section {
+    min-height: auto;
+    .container {
+      gap: vwm(54px);
+      margin-top: vwm(60px);
+    }
+    .kv-title-box {
+      .kv-title {
+        font-size: vwm(90px);
+      }
+      .kv-sec-title {
+        font-size: vwm(64px);
+      }
+      .kv-desc {
+        font-size: vwm(32px)
+      }
+    }
+    .kv-deco-box {
+      @include size(vwm(608px * 1.2), vwm(441px * 1.2));
+      .skill01 {
+        @include size(vwm(59.6px * 1.2), vwm(50.96px * 1.2));
+        top: vwm(64.5px);
+        left: vwm(10px);
+      }
+      .skill02 {
+        @include size(vwm(59.8px * 1.2), vwm(53px * 1.2));
+        top: vwm(113px);
+        left: vwm(105px);
+      }
+      .skill03 {
+        @include size(vwm(46px * 1.2), vwm(64px * 1.2));
+        left: vwm(173px);
+      }
+      .skill04 {
+        @include size(vwm(50px * 1.2), vwm(67px * 1.2));
+        right: vwm(174px);
+      }
+      .skill05 {
+        @include size(vwm(50px * 1.2));
+        top: vwm(113px);
+        right: vwm(111px);
+      }
+      .skill06 {
+        @include size(vwm(50px * 1.2));
+        top: vwm(46px);
+      }
+      .kv-visual {
+        @include size(vwm(272px * 1.2), vwm(353px * 1.2));
+        left: vwm(168px * 1.2);
+      }
+    }
+    
+  }
+
+  .section-news-ticker {
+    font-size: vwm(72px);
+    margin-top: vwm(72px);
+  }
+
+  // about style
+  .section-about {
+    .about-content {
+      flex-direction: column;
+      gap: vwm(24px);
+      .about-left {
+        @include size(vwm(604px), vwm(503px));
+        flex: auto;
+        margin: 0;
+        .code-left {
+          @include size(vwm(274px), vwm(214px));
+          left: 0;
+        }
+        .code-right {
+          @include size(vwm(228px), vwm(178px));
+          right: vwm(-100px);
+          bottom: vwm(45px);
+        }
+        .about-visual {
+          @include size(vwm(571px), vwm(503px));
+          left: 20%;
+        }
+      }
+      .about-right {
+        .about-text {
+          font-size: vwm(30px);
+        }
+        .about-tag-box {
+          gap: vwm(16px);
+          .tag {
+            padding: vwm(8px) vwm(16px);
+            border-radius: vwm(24px);
+            font-size: vwm(30px);
+          }
+        }
+      }
+    }
+  }
+
+  // experience style
+  .section-experience {
+    .experience-item {
+      padding-left: vwm(24px);
+      padding-bottom: vwm(16px);
+      &:before {
+        top: vwm(16px);
+        left: vwm(-9px * 2);
+        width: vwm(16px * 2);
+        height: vwm(16px * 2);
+      }
+      &:not(:first-child) {
+        margin-top: vwm(-12px);
+      }
+
+    }
+    .experience-link {
+      gap: vwm(12px);
+      border-radius: vwm(16px);
+      padding: vwm(8px) vwm(12px);
+
+    }
+    .experience-content {
+      .experience-title {
+        font-size: vwm(36px);
+      }
+      .experience-company {
+        @include flex-column;
+        font-size: vwm(40px);
+        .company {
+          display: inline-block;
+        }
+      }
+      .experience-date {
+        font-size: vwm(28px);
+      }
+    }
+
+    .experience-job-row {
+      padding: 0 vwm(8px);
+      .experience-job-item {
+        font-size: vwm(28px);
+      }
+    }
+  }
+
+  // soho style
+  .section-soho {
+    .soho-grid {
+      @include flex-column;
+      gap: vwm(24px);
+    }
+  }
+}

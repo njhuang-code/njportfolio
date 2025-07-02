@@ -1,0 +1,114 @@
+@keyframes aniMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-4px)
+  }
+
+  50% {
+    transform: translateY(0px)
+  }
+
+  to {
+    transform: translateY(-4px)
+  }
+}
+
+.animate {
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+
+  &_fadeIn {
+    opacity: 0;
+  }
+
+  &_fadeUp {
+    opacity: 0;
+    transform: translate(0, -50px);
+  }
+
+  &_fadeDown {
+    opacity: 0;
+    transform: translate(0, 50px);
+  }
+
+  &_fadeLeft {
+    opacity: 0;
+    transform: translate(-50px, 0);
+  }
+
+  &_fadeRight {
+    opacity: 0;
+    transform: translate(50px, 0);
+  }
+
+  &_maskLeft {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+
+  &_maskRight {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+
+  &_maskUp {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  &_maskDown {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+
+  &_active {
+    opacity: unset;
+    transform: unset;
+    transition: all 1000ms;
+  }
+
+  &_delay100 {
+    transition-delay: 100ms;
+  }
+
+  &_delay200 {
+    transition-delay: 200ms;
+  }
+
+  &_delay300 {
+    transition-delay: 300ms;
+  }
+
+  &_delay400 {
+    transition-delay: 400ms;
+  }
+
+  &_delay500 {
+    transition-delay: 500ms;
+  }
+
+  &_delay600 {
+    transition-delay: 600ms;
+  }
+
+  &_delay700 {
+    transition-delay: 700ms;
+  }
+
+  &_delay800 {
+    transition-delay: 800ms;
+  }
+
+  &_delay900 {
+    transition-delay: 900ms;
+  }
+
+  &_delay1000 {
+    transition-delay: 1000ms;
+  }
+
+}

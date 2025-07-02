@@ -1,0 +1,48 @@
+@media (max-width: ($pc-midrwd-breakpoint* 1px)) {
+  // about style
+  .section-about {
+    .about-content {
+      gap: vw(24px);
+      height: auto;
+      .about-left {
+        @include size(vw(604px), vw(503px));
+        margin-top: vw(78px);
+        margin-right: vw(68px);
+        .code-left {
+          @include size(vw(274px), vw(214px));
+          left: vw(-54px);
+        }
+        .code-right {
+          @include size(vw(228px), vw(178px));
+          right: vw(5px);
+          bottom: vw(66px);
+        }
+        .about-visual {
+          @include size(vw(571px), vw(503px));
+        }
+      }
+      .about-right {
+        
+        .about-tag-box {
+          gap: vw(16px);
+          .tag {
+            padding: vw(8px) vw(16px);
+            border-radius: vw(24px);
+          }
+        }
+      }
+    }
+  }
+
+  // soho style
+  .section-soho {
+    .soho-grid {
+      grid-template-rows: repeat(3, vw(200px));
+      gap: vw(16px);
+    }
+    .soho-item {
+      font-size: vw(20px);
+      border-radius: vw(16px);
+    }
+  }
+}

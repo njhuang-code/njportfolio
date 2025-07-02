@@ -1,0 +1,195 @@
+:root {
+  --clr-accent-700: #d94841;
+  --clr-accent-500: #ff8071;
+  --clr-accent-200: #ffb8a5;
+  --clr-accent-100: #ffdecb;
+
+  --clr-support-700: #f2a84c;
+  --clr-support-100: #ffdc73;
+  --clr-support-50: #ffe8a5;
+
+  --clr-primary-gradient: linear-gradient(to right, #2448b1 0%, #457eeb 25%, #457eeb 50%, #457eeb 75%, #2448b1 100%);
+  --clr-primary-title: linear-gradient(to right, #457eeb 0%, #457eeb 25%, #457eeb 50%, #2448b1 75%, #2448b1 100%);
+  --clr-primary-gradient-blue: linear-gradient(to right, #457eeb 0%, #457eeb 10%, #2448b1 80%, #2448b1 95%);
+
+  --clr-primary-900: #1f3b8f;
+  --clr-primary-800: #2f5ac5;
+  --clr-primary-750: #2769d4;
+  --clr-primary-700: #2448b1;
+  --clr-primary-500: #457eeb;
+  --clr-primary-200: #a7d6ff;
+  --clr-primary-100: #c6f2ff;
+
+  --clr-secondary-500: #329bd3;
+  --clr-secondary-300: #79d1ff;
+
+  --clr-neutral-900: #333333;
+  --clr-neutral-800: #6a7185;
+  --clr-neutral-700: #7a7a7a;
+  --clr-neutral-600: #d7d7d7;
+  --clr-neutral-500: #d5d5d5;
+  --clr-neutral-400: #e7e7e7;
+  --clr-neutral-300: #eeeeee;
+  --clr-neutral-100: #f2f2f2;
+  --clr-neutral-50: #ffffff;
+
+  --fw-regular: 500;
+  --fw-median: 600;
+  --fw-bold: 700;
+
+  --ff-arial: Arial;
+  --ts-neutral-900: 0 0 0 var(--clr-neutral-900);
+
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-450: 0.938rem;
+  --fs-500: 1.063rem;
+  --fs-600: 1.125rem;
+  --fs-700: 1.25rem;
+  --fs-750: 1.375rem;
+  --fs-800: 1.5rem;
+  --fs-900: 1.75rem;
+  --fs-950: 2rem;
+  --fs-1000: 2.25rem;
+  --fs-1100: 2.5rem;
+
+  --bdr-button-xl: 25px;
+  --bdr-button-l: 15px;
+  --bdr-button-m: 5px;
+  --bdr-button-s: 2px;
+
+  --fs-body: var(--fs-400);
+  --fs-nav: var(--fs-700);
+  --fs-button: var(--fs-600);
+  --fs-heading: var(--fs-800);
+  --fs-news-link: var(--fs-500);
+
+
+  --max-width: 1400px;
+  --m-center: auto;
+}
+
+@media screen and (max-width:1280px) {
+  :root {
+    --max-width: 1080px;
+  }
+}
+
+/* @media screen and (max-width:960px) {
+  :root{
+    --max-width:768px;
+  }
+} */
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-family: Arial, 'New Microsoft JhengHei', 'Microsoft JhengHei', sans-serif;
+  ;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+}
+
+@media screen and (max-width:425px) {}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+ol,
+ul,
+p {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-neutral-900)
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+input::placeholder {
+  font-size: var(--fs-300);
+  color: var(--clr-neutral-500);
+  padding-left: 0.25rem;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

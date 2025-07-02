@@ -1,0 +1,194 @@
+.dialogify .estimate-list {
+  color: #F7F7F7;
+}
+.dialogify .estimate-list__container .form-control {
+  color: #F7F7F7;
+  border: 1px solid #444;
+}
+.dialogify .estimate-list__container .form-control::placeholder {
+  color: #A7A6AD;
+}
+.dialogify .estimate-list__container .btn {
+  background: rgba(28, 28, 28, 0.6);
+}
+.dialogify .estimate-list__container .btn:hover {
+  color: #C7C6CB;
+  background: #444;
+}
+.dialogify .estimate-list__container .btn-filter__input:checked + .btn-filter__label {
+  background: #124c5f;
+}
+.dialogify .estimate-list__container .btn-outline {
+  border-color: #33cccc;
+  color: #33cccc;
+}
+.dialogify .estimate-list__container .btn-outline:hover {
+  background: transparent;
+  color: #00B0B6;
+  border-color: #00B0B6;
+}
+.dialogify .dialogify__body .product-link {
+  color: #F7F7F7;
+}
+.dialogify .dialogify__body .product-link:hover {
+  color: #33cccc;
+}
+
+.btn {
+  height: auto;
+  line-height: 1;
+}
+.btn:hover {
+  color: #A6A6A6;
+  background: #DCDCDC;
+  transition: all 0.3s;
+}
+.btn.btn-primary {
+  color: #F7F7F7;
+  border: 1px solid #00B0B6;
+  background: linear-gradient(to top, #39989a, #54bfbd);
+}
+.btn.btn-primary:hover {
+  background: linear-gradient(to top, #3790a2 0%, #43aba9);
+}
+
+.estimate-list__heading {
+  background: #272728;
+  border-color: #444;
+}
+.estimate-list__head {
+  background: #1C1C1C;
+}
+.estimate-list__head .search__row::before {
+  color: #C7C6CB;
+}
+.estimate-list__head.head--sec {
+  background: #272728;
+}
+.estimate-list__left {
+  border-color: #444;
+}
+.estimate-list__footer {
+  border-color: #444;
+  background: inherit;
+}
+.estimate-list__footer-num {
+  color: #F25C62;
+}
+.estimate-list__icon {
+  color: #F7F7F7;
+}
+.estimate-list__icon:hover {
+  color: #00B0B6;
+}
+.estimate-list__icon .icon-side__trigger {
+  fill: #C7C6CB;
+}
+
+.cart-list__item {
+  border-bottom: 1px solid #444;
+}
+.cart-list__item:hover {
+  background: rgba(0, 176, 182, 0.15);
+}
+.cart-list__item.is-active {
+  background: rgba(0, 176, 182, 0.15);
+}
+.cart-list__item.is-active .cart-list__title {
+  color: #33cccc;
+}
+.cart-list__item.is-active .dropdown-group {
+  border-color: #C7C6CB;
+}
+
+.product-list--info {
+  color: #33cccc !important;
+}
+.product-list--tag {
+  color: #33cccc !important;
+  border-color: #33cccc;
+}
+.product-list--msg {
+  color: #f25c62;
+}
+.product-list--add {
+  color: #F7F7F7;
+  background: #117e96;
+}
+.product-list--add:hover {
+  background: #33cccc;
+}
+.product-list__head:hover {
+  background: #327f90;
+}
+.product-list__head.is-toggle {
+  background: #327f90;
+}
+.product-list__head.is-toggle .product-list--info {
+  color: #F7F7F7 !important;
+}
+.product-list__item:nth-child(odd) {
+  background: #1C1C1C;
+}
+.product-list__brand {
+  color: #33cccc;
+  background: rgba(9, 132, 146, 0.35);
+}
+.product-list__textbox.add-item:hover {
+  background: #323232;
+}
+.product-list__card {
+  border-color: #444;
+}
+.product-list__card.order-status {
+  background: rgba(62, 116, 126, 0.5);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.form-filter {
+  background: #111111;
+}
+.form-filter::before {
+  border-color: transparent transparent #111111;
+}
+.form-filter-priceSign {
+  color: #F7F7F7;
+}
+.form-filter__input:checked + .form-filter__label {
+  color: #33cccc;
+  border-color: #33cccc;
+}
+.form-filter__label {
+  border-color: #444;
+  background: #111111;
+  color: #A7A6AD;
+}
+.form-filter__range--main {
+  background: #327f90;
+}
+.form-filter__range--circle {
+  background: #33cccc;
+}
+
+.c-estimate-list__form .c-estimate-list__table {
+  border: 1px solid #444;
+}
+.c-estimate-list__form .c-estimate-list__icon .fa-files-o {
+  transition: all 0.3s;
+}
+.c-estimate-list__form .c-estimate-list__icon .fa-files-o:hover {
+  color: #33cccc !important;
+}
+.c-estimate-list__form .c-estimate-list__footer {
+  border-color: transparent #444 #444;
+  border-style: solid;
+}
+.c-estimate-list__form .c-estimate-list__head {
+  background: #327f90 !important;
+}
+.c-estimate-list__form .c-estimate-list__row:nth-child(even) {
+  background: #1C1C1C !important;
+}
+.c-estimate-list__form .c-estimate-list .c-list__price {
+  color: #f25c62 !important;
+}

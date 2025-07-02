@@ -1,0 +1,137 @@
+.swiper {
+  width: 100%;
+  max-width: 1200px;
+}
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  @include flex-center;
+  @include size(px-rem(160), px-rem(48));
+  border-radius: px-rem(99);
+  font-size: px-rem(18);
+  color: $primary-text;
+  font-weight: 500;
+  &-primary {
+    border: 2px solid $primary;
+  }
+  @include hover-only {
+    &:hover {
+      background: $primary;
+      color: $white-text;
+      transition: background .3s ease;
+    }
+  }
+}
+
+.container {
+  max-width: $pc-midrwd-breakpoint * 1px;
+  margin: 0 auto;
+  padding: 0 px-rem(16);
+}
+
+.content {
+  @include flex-column;
+  align-items: center;
+  gap: px-rem(48);
+}
+
+.section {
+  padding: px-rem(72) 0;
+}
+
+.section-title {
+  font-size: px-rem(24);
+  font-weight: 500;
+}
+
+.section-sec-title {
+  color: $primary-text;
+  font-size: px-rem(60);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.tab-row {
+  @include d-flex;
+  @include flex-wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: px-rem(32);
+  width: 100%;
+  .tab-item {
+    font-size: px-rem(20);
+    color: $third-text;
+    cursor: pointer;
+    &:hover {
+      color: $primary-text;
+      font-weight: 900;
+      transition: all .3s ease-in-out;
+    }
+    &:nth-child(2) {
+      width: 2px;
+      min-height: 15px;
+      height: 100%;
+      background: $fourth;
+    }
+    &.is-active {
+      color: $primary-text;
+      font-weight: 900;
+    }
+  }
+}
+
+.footer {
+  border-top: 1px solid $primary-border;
+  padding: px-rem(16) 0;
+  text-align: center;
+  font-size: px-rem(14);
+  .footer-link {
+    @include flex-center;
+    text-decoration: underline;
+    vertical-align: middle;
+    .material-icons-round {
+      font-size: px-rem(16);
+    }
+  }
+}
+
+@media (max-width: ($mbrwd-breakpoint* 1px)) {
+
+  .btn {
+    @include size(vwm(160px * 2), vwm(48px * 2));
+    border-radius: vwm(99px);
+    font-size: vwm(18px * 2);
+    &-primary {
+      border: vwm(2px * 2) solid $primary;
+    }
+  }
+  
+  .content {
+    gap: vwm(48px);
+  }
+
+  .section {
+    margin: vwm(100px) 0;
+  }
+
+  .section-title {
+    font-size: vwm(24px * 1.5 );
+  }
+  
+  .section-sec-title {
+    font-size: vwm(60px * 1.5);
+  }
+
+  .tab-row {
+    gap: vwm(32px);
+    .tab-item {
+      font-size: vwm(36px);
+      &:nth-child(2) {
+        width: vwm(2px * 2);
+        min-height: vwm(15px * 2);
+      }
+    }
+  }
+}

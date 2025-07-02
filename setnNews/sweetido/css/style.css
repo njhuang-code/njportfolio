@@ -1,0 +1,627 @@
+/* CSS Document */
+/************************************************************************************
+RESET
+*************************************************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;}
+
+body {
+    color:#333;
+    font-family: '微軟正黑體';
+    -webkit-text-size-adjust: none;/*防止allpe的safari瀏覽器字體變大*/
+    background-color:#82d0e4;}
+
+ol, ul {
+    list-style: none;}
+
+/* * {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;} */
+
+a {text-decoration: none;}
+a {color:#333; text-decoration: none;}
+a:hover {text-decoration:none;}
+
+img {
+  border: none;}
+
+  
+ol, ul, li {
+  list-style: none;}
+
+input, textarea, select, button {
+  font-size: 14px;}
+
+h1{
+  display: none;}
+
+/* 共用樣式區 */
+
+.mob{
+    display: none;
+}
+
+.black_overlay {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1000;
+    opacity: 0.70;
+}
+
+.popup {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    display: flex;}
+
+.popupbox{
+    background-color:#fff;
+    width:90%;
+    max-width:350px;
+    border-radius: 10px;
+    text-align: center;
+    padding:30px 0;
+    position: relative;
+}
+
+
+
+/* 主視覺開始 */
+
+#main{
+    width:100%;
+    height:auto;
+    font-family: Verdana, '微軟正黑體';
+    overflow: hidden;
+}
+
+#main .container{
+    position: relative;
+    margin:0 auto;
+    font-family: Arial,微軟正黑體;
+    background: url(../images/bg_pc.jpg) center 0 no-repeat;
+    padding-bottom:50px;
+}
+
+#main .logo{
+    margin:0 auto;
+    padding:10px;
+    width:1940px;
+}
+
+.header{
+    width:100%;
+    max-width: 960px;
+    height:auto;
+    margin:0 auto;
+    position: relative;
+}
+
+.header .header-words{
+    width:960px;;
+    height:365px;
+    margin-top:-15px;;
+}
+
+.header .header-main{
+    width:683px;
+    height:300px;
+    margin:0 auto;
+    margin-top:-290px;
+}
+
+.header .header-rule{
+    width:100%;
+    margin-top:-45px;
+    text-align: center;
+}
+
+
+.header-step{
+    width:100%;
+    margin:0 auto;
+    max-width:811px;;
+}
+
+.step{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top:35px;
+    justify-content:center;
+    text-align: center;
+    line-height: 28px;
+
+}
+
+
+.stepbox {
+    font-weight: bold;
+    width:33.3%;
+}
+
+/* Step123 title*/
+.stepbox p:nth-child(1){
+    color:#fff;
+    font-size:22px;
+}
+
+.stepbox p span{
+    color:#82d0e4;
+    background-color: #fff;
+    font-size:30px;
+    border-radius:50%;
+    padding:1px 10px;
+    margin-left:5px;
+}
+
+/* Step rule*/
+.stepbox p:nth-child(2){
+    font-size:16px;
+}
+
+.stepbox a{
+    color:#fff;
+    cursor: pointer;
+}
+
+.stepicon{
+    padding:15px 0;
+    width:40%;
+    margin:0 auto;
+}
+
+.stepicon img{
+    width:100%
+}
+
+/* login btn */
+.loginbtn{
+    text-align: center;
+    width:100%;
+    margin:23px 0 0 0;
+}
+
+.loginbox{
+    max-width: 425px;
+    margin:0 auto;
+}
+
+.loginbtn a{
+    position: relative;
+    display: inline-block;
+    background-color:#4360c0;
+    color:#fff;
+    padding:17px 30px;
+    font-size:22px;
+    font-weight: bold;
+    border-radius:15px;
+    box-shadow: 0px 5px 0px #344b97;
+    letter-spacing:1.5px;
+    cursor: pointer;
+}
+
+.loginbtn a:hover{
+    background-color:#7b4836;
+    color:#ffe400;
+    box-shadow: 0px 5px 0px #3d2019;
+}
+
+.loginbtn .finger{
+    position: absolute;
+    right:0;
+    bottom:-30px;
+}
+
+/* 贈品區開始 */
+
+#main .prize{
+    background: url(../images/square-bg.png) bottom #fea8c5 repeat;
+    background-size:auto;
+    padding-top:70px;
+}
+
+.prizebg{
+    background: url(../images/center-bg.png) top no-repeat;
+    margin-bottom:-100px;
+}
+
+.prizebox{
+    width:100%;
+    max-width:960px;
+    margin:0 auto;
+}
+
+.title-bar{
+    text-align: center;
+    padding-bottom:40px;
+}
+
+.prize-info{
+    width:100%;
+    color:#fff;
+}
+
+.p-box{
+    width:100%;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    max-width:960px;
+    margin: auto;
+}
+
+.p-box li{
+    border:3px #3d2019 solid;
+    background-color: #3d2019;
+    border-radius: 10px 10px 0 0;
+    margin:5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: block;
+    font-size:16px;;
+    line-height: 20px;
+    letter-spacing: 1px;
+    width:23.9%;
+}
+
+.p-box li:hover{
+    border:3px #ffe400 solid;
+}
+
+.p-box li img{
+    width:100%;
+    overflow: hidden;
+}
+
+.p-box h3{
+    text-align: center;
+    padding:0 15px;
+}
+
+.list-info{
+    margin-top:50px;
+    margin-bottom:50px;
+    width:100%;
+}
+
+.listbox{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    max-width:960px;
+    justify-content: center;
+}
+
+.l-box{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    max-width:390px;
+    margin:0 auto;
+    justify-content:center;
+    align-items: center;
+    border-bottom: #ffface 1.5px dashed;
+}
+
+.list{
+    background-color: #7b4836;
+    border:#3d2019 3px solid;
+    width:42.5%;
+    border-radius:10px 10px 0 0;
+    margin:5px;
+    padding:5px 10px 10px 10px;
+    color:#ffface;
+    text-align: center;
+}
+
+.list:hover{
+    border:#ffe400 3px solid;
+}
+
+.list li{
+    font-size:15px;
+    line-height: 30px;;
+    text-align: center;
+    padding-right:10px;
+    
+}
+
+.list p:nth-child(1){
+    background-color: #ffe400;
+    color:#333333;
+    padding:5px 8px;
+    display: inline-block;
+    text-align: center;
+    font-size:18px;
+    border-radius: 10px;
+}
+
+.list p:nth-child(2){
+    font-size:20px;
+    padding:8px 0;
+}
+
+/* 尚未公布 */
+
+.unpub-box{
+    background-color: #7b4836;
+    border:#3d2019 3px solid;
+    width:42.5%;
+    border-radius:10px 10px 0 0;
+    margin:5px;
+    text-align: center;
+    background-color:#3d2019;
+}
+
+.unpub{
+    padding-top:10px;
+}
+
+.noticebox{
+    width:90%;
+    font-size: 15px;
+    max-width: 882px;
+    margin:0 auto;
+    color:#6d392e;
+    line-height: 28px;
+    letter-spacing:0.5px;;
+}
+
+#main .bg-bottom{
+    background: url(../images/bottom-bg.png) top no-repeat;
+    margin:0 auto;
+    height:321px;
+    padding-top:100px;
+}
+
+/* footer區 */
+
+.footer{
+    background-color:#e08d5a;
+    width:100%;
+    text-align: center;
+    color:#fff;
+    padding:10px 0;
+    font-size:15px;
+}
+
+.footerbox{
+    max-width:960px;
+    width:95%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footerbox div:nth-child(1){
+    text-align: left;
+}
+
+.media a{
+    padding:0 5px;
+}
+
+/* pupup頁 */
+
+.popupbox h3{
+    font-size: 26px;
+    color:#666;
+    padding:10px 0 5px 0;
+}
+
+.X{
+    background: url(../images/X.png);
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+}
+
+.idbox{
+    width:100%;
+    max-width:230px;
+    margin:0 auto;
+}
+
+.IDmeb p{
+    color:#82d0e4;
+    letter-spacing:1.5px;
+    font-size:18px;
+    padding:0px 0 5px 0;
+    border-bottom: #d5d5d5 solid 1px;
+    position: relative;}
+
+/* 會員圖示logo */
+.IDmeb p:before{
+    content: "";
+    display: block;
+    width: 14px;
+    height: 18px;
+    background: url(../images/mebicon.png);
+    left: 48px;
+    top: 2px;
+    position: absolute;
+}
+
+.vidol-loginbox{
+    padding:25px 0;
+}
+
+.vidol-loginbox p{
+    font-size:16px;
+    color:#666666;
+}
+
+.vidol-loginbox input{
+    border:solid #d5d5d5 1px;
+}
+
+.summit{
+    display: inline-block;
+    background-color:#fea8c5;
+    color:#fff;
+    padding:5px 50px;
+    font-size:17px;
+    letter-spacing:1.5px;
+    margin-bottom:30px;
+    box-shadow: 0px 5px 0px #d78ca5;
+    cursor: pointer;
+}
+
+/* ---------------------------------中間條度區*/
+@media screen and (max-width: 960px) {
+
+    #main .container{
+        background: none;
+    }
+
+    #main .logo{
+        width:15%;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 1;
+        padding:5px;
+    }
+
+    #main .logo img{
+        width:100%;
+    }
+
+    .header-words,.header-main,.header-rule{
+        display: none;
+    }
+
+    .main-mob{
+        width:100%;
+        height:auto;
+        padding:0;
+    }
+
+    .main-mob .mob{
+        width:100%;
+        display: block;
+        height:auto;
+        margin:0 auto;
+        position: inherit;
+    }
+
+    .p-box li{
+        width:46.8%
+    }
+
+
+}
+
+
+/* ---------------------------------平板*/
+@media screen and (max-width: 768px) {
+
+
+
+}
+
+
+@media screen and (max-width: 680px) {
+
+    .header{
+        height:auto;
+    }
+
+    .stepbox{
+        width:50%;
+    }
+
+    /* .stepicon{
+        width:35%;
+    } */
+
+    .footerbox{
+        justify-content: center;
+    }
+
+    .media a img{
+        width:30%;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .step{
+        padding:10px;
+        line-height: 20px;
+    }
+
+    /* .stepbox{
+        width:41%;
+    } */
+
+    .stepicon{
+        width:45%;
+    }
+
+    .stepbox p:nth-child(1){
+        font-size:16px;
+    }
+
+    .stepbox p:nth-child(2){
+        font-size:14px;
+    }
+
+    .stepbox p span{
+        font-size:20px;
+        padding:1px 7px;
+    }
+
+
+    .loginbtn{
+        text-align: center;
+        width:100%;
+        margin:0;
+    }
+
+    .loginbtn a{
+        padding: 10px 60px;
+        font-size:18px;
+    }
+
+
+
+    .unpub-box,.list{
+        width:95%;
+    }
+
+    
+
+}

@@ -1,0 +1,112 @@
+// Breakpoint
+$pcrwd-breakpoint: 1680;
+$pc-midrwd-breakpoint: 1200;
+$mbrwd-breakpoint: 768;
+
+// basic color
+$b1: #ffffff;
+$f1: #f7f7f7;
+
+$primary: #2B62E1;
+$third: #E9F2FE;
+$fourth: #D4E5FD;
+
+// fonts Color
+$primary-text: #2B62E1;
+$secondary-text: #262626;
+$third-text: #7EAAF6;
+$white-text: #ffffff;
+$black-text: #000000;
+
+// border color
+$primary-border: #C8C8C8;
+
+
+@mixin d-flex {
+  display: flex;
+}
+
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin background-cover {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@mixin background-contain {
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@mixin hover-only {
+  @media (any-hover: hover) {
+    @content;
+  }
+}
+
+@function xy($xy, $ttlw) {
+  @return ($xy / $ttlw * 100%);
+}
+
+@function pct($target) {
+  $vw-context: (
+    $pc-midrwd-breakpoint * .01) * 1px;
+  @return ($target / $vw-context) * 1%;
+}
+
+@function vw($target) {
+  $vw-context: (
+    $pc-midrwd-breakpoint * .01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function vwm($target){
+  $vw-context: ($mbrwd-breakpoint * .01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function px-rem($px, $base: 16) {
+  @return ($px / $base * 1rem);
+}
+
+@mixin posXY($x: 0, $y: 0) {
+  left: calc(50% + #{$x}px);
+  top: xy($y, $h);
+}
+
+@mixin size($w: null, $h: $w) {
+  width: $w;
+  height: $h;
+}

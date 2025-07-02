@@ -1,0 +1,207 @@
+.musicControlIcon {
+    margin: 0 0.125em;
+    display: block;
+    width: 2em;
+    line-height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 1px;
+    cursor: pointer;
+}
+
+
+    .musicControlIcon i {
+        line-height: 2em;
+        vertical-align: middle;
+    }
+
+    .musicControlIcon.musicControl_play {
+        padding-left: 2px;
+    }
+
+    .musicControlIcon:hover {
+        background-color: #dddddd;
+    }
+
+
+    .musicControlIcon.disabled {
+        cursor: default;
+        color: #aeaeae;
+    }
+    .musicControlIcon:hover {
+        background-color: #dddddd;
+    }
+
+.musicBox *{
+    box-sizing: border-box;
+}
+.musicBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.125em 0.5em;
+    border-radius: 2em;
+    background: #f0f0f0;
+    font-family: Arial;
+    color: #2b2b2b;
+    font-size: 14px;
+}
+
+.musicPlayer {
+    flex: 1 1 200px;
+}
+
+.musicBar {
+    background: #d5d5d5;
+    stroke-width: 1;
+    height: 5px;
+    width: 100%;
+}
+
+    .musicBar:hover {
+        cursor: pointer;
+    }
+
+    .musicBar #length {
+        width: 0%;
+        background: #2b2b2b;
+        height: 100%;
+        transition: width linear 200ms;
+        position: relative;
+    }
+
+    .musicBar:hover #length::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(50%,-50%);
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #2b2b2b;
+    }
+
+.musicTime {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 1.25em;
+    margin-right: 1em;
+    font-size: 12px;
+}
+
+    .musicTime > span:first-child::after {
+        content: "\002F";
+        margin: auto 0.25em;
+        white-space: nowrap
+    }
+
+
+.musicControl {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+}
+
+.musicSpeedControl {
+    margin-left: 0.5em;
+    position: relative;
+}
+
+.musicSpeedBox {
+    position: absolute;
+    top: 90%;
+    right: 50%;
+    flex-wrap: wrap;
+    width: 100px;
+    text-align: center;
+    height: 8em;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 0 5px #dddddd;
+    -moz-box-shadow: 0 0 5px #dddddd;
+    box-shadow: 0 0 5px #dddddd;
+    z-index: 9;
+}
+
+    .musicSpeedBox > div {
+        line-height: 2em;
+        width: 100%;
+        cursor: pointer;
+    }
+
+        .musicSpeedBox > div:hover {
+            width: 100%;
+            cursor: pointer;
+            background-color: #efefefdd;
+        }
+
+    .musicSpeedBox::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #f5f5f5;
+    }
+
+    .musicSpeedBox::-webkit-scrollbar {
+        width: 10px;
+        background-color: black;
+    }
+
+    .musicSpeedBox::-webkit-scrollbar-thumb {
+        background-color: #a9a9a9;
+    }
+
+
+
+.news-audio-area {
+    display: flex;
+    width: 100%;
+    min-width: 450px;
+    max-width: 450px;
+    background: var(--clr-primary-800);
+    border: 1px solid var(--clr-primary-800);
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+
+.news-audio-area {
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+    .news-audio-area > a {
+        color:var(--clr-neutral-100);
+        font-size: 14px;
+        width: 5em;
+        text-align: center;
+    }
+
+
+.news-audio-tag-area {
+    flex: 1 1 300px;
+    height: 100%;
+    position: relative;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .news-audio-area {
+        margin-top: initial;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .news-audio-area{
+        min-width: auto;
+    }
+}

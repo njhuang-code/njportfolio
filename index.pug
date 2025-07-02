@@ -1,0 +1,345 @@
+extends _layout.pug
+
+append vars
+block append nav
+block content
+  main
+    .main-content
+      section.section.kv-section
+        .container
+          .kv-title-box
+            h1.kv-title Hi, I’M 
+              span.kv-title-point NJ
+            p.kv-sec-title UI & WEB DESIGNER
+            p.kv-desc 擁有 5 年以上的網頁介面設計及前端切版經驗，主要透過下班、假日時間進修課程，
+              br
+              |近幾年開始接案，希望能夠累積更多實務經驗與專案管理能力。
+          .kv-deco-box
+            img.skill.skill01(src="./images/img-vue.svg", alt="Vue")
+            img.skill.skill02(src="./images/img-sass.svg", alt="Sass")
+            img.skill.skill03(src="./images/img-figma.svg", alt="Figma")
+            img.skill.skill04(src="./images/img-html.svg", alt="HTML5")
+            img.skill.skill05(src="./images/img-git.svg", alt="Git")
+            img.skill.skill06(src="./images/img-css.svg", alt="CSS3")
+            img.kv-visual(src="./images/img-visual.svg", alt="NJ")
+          a(href="#skill").kv-scroll
+            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#2B62E1")
+              path(d="M480-80q-116 0-198-82t-82-198v-240q0-116 82-198t198-82q116 0 198 82t82 198v240q0 116-82 198T480-80Zm40-520h160q0-72-45.5-127T520-796v196Zm-240 0h160v-196q-69 14-114.5 69T280-600Zm200 440q83 0 141.5-58.5T680-360v-160H280v160q0 83 58.5 141.5T480-160Zm0-360Zm40-80Zm-80 0Zm40 80Z")
+            span.material-icons-round keyboard_double_arrow_down
+      .section-news-ticker
+        .news-ticker VISUAL DESIGN・MOCKUP・RWD・TYPOGRAPHY・UIUX・PROTOTYPE・VISUAL DESIGN・MOCKUP・RWD・TYPOGRAPHY・UIUX・VISUAL DESIGN・MOCKUP・RWD・TYPOGRAPHY・UIUX・VISUAL DESIGN・MOCKUP・RWD・TYPOGRAPHY・UIUX
+      section.section.section-skill#skill 
+        .container 
+          .content 
+            ul.section-skill-row 
+              li.section-skill-item.animate.animate_fadeLeft.animate_delay100 Skills
+              li.section-skill-item.animate.animate_fadeLeft.animate_delay200 Figma
+              li.section-skill-item.animate.animate_fadeLeft.animate_delay300 HTML
+              li.section-skill-item.animate.animate_fadeLeft.animate_delay400 SCSS
+              li.section-skill-item.animate.animate_fadeLeft.animate_delay500 Vue.js
+              li.section-skill-item.animate.animate_fadeLeft.animate_delay600 jQuery
+              li.section-skill-item.animate.animate_fadeLeft.animate_delay700 Git
+              li.section-skill-item.animate.animate_fadeLeft.animate_delay800 GSAP
+              li.section-skill-item.animate.animate_fadeLeft.animate_delay900
+                a.btn.btn-primary(href="#") My Github
+      section.section.section-about#about
+        .container
+          .content
+            .heading
+              h2.section-title.text-center.animate.animate_fadeDown 關於NJ
+              p.section-sec-title.text-center.animate.animate_fadeDown.animate_delay100 ABOUT
+            .about-content
+              .about-left
+                img.code-left.animate.animate_fadeLeft.animate_delay500(src="./images/img-s2-code.svg", alt="code")
+                img.code-right.animate.animate_fadeRight.animate_delay300(src="./images/img-s2-code.svg", alt="code")
+                img.about-visual.animate.animate_fadeLeft.animate_delay200(src="./images/img-s2-visual.svg", alt="NJ")
+              ul.about-right 
+                li.about-text.animate.animate_fadeRight.animate_delay200 我是楠鈞(NJ)，目前任職於巴哈姆特電玩資訊站擔任 UI Designer，負責本站所有介面(Website、App)設計、網頁切版，並針對老舊頁面進行優化改版。期間經手專案包含：首頁改版、電應板插入估價單、GNN 留言系統優化等等...前期使用 Figma 設計，再利用 HTML、Scss 進行切版，也會運用 jQuery 或 簡易的 Javascript 設計動畫及功能操作。除了網頁能夠獨立設計、切版之外，也必須同時與 iOS 、安卓工程師協作開發 App UI。
+                li.about-text.animate.animate_fadeRight.animate_delay200 上一份工作任職於永豐銀行擔任程式設計人員，主要專注於前端開發。負責網銀、行銀及 App 前端 Webview 切版、維運和改版工作。會使用到 Pug 和 Sass 來製作樣板，提高切版效率，並利用 Javascript、GSAP 撰寫互動特效，同時使用 Prepros、Gulp 進行環境開發打包，以及 Git 版控。除了獨立開發，也參與團隊協作，完成大型專案並與跨部門溝通，例如：雲端信貸、大咖 App、新大戶 App。
+                li.about-text.about-text.animate.animate_fadeRight.animate_delay300 近年除了日常工作，也會利用下班、假日時間接案與進修網頁課程，來提升切版效率以及專案管理能力，也將這些經歷適時地運用到專案上，藉此優化、改善 UIUX，並給使用者更順暢的瀏覽體驗。
+                li.about-tag-box.about-text.animate.animate_fadeRight.animate_delay500
+                  .tag #天蠍座
+                  .tag #INFJ
+                  .tag #愛運動
+      section.section.section-experience#experience
+        .container
+          .content
+            .heading
+              h2.section-title.text-center.animate.animate_fadeDown 工作經歷
+              p.section-sec-title.text-center.animate.animate_fadeDown.animate_delay100 EXPERIENCE
+            ul.experience-row.animate.animate_fadeDown.animate_delay200
+              li.experience-item.is-open
+                .experience-link.animate
+                  .experience-content
+                    .experience-left
+                      .experience-title UI Designer
+                      .experience-company 巴哈姆特電玩資訊站
+                        span.company (旺普網路資訊公司)
+                    .experience-right
+                      .experience-date 2023/10 - NOW
+                      span.material-icons-round.expand-icon expand_less
+                ol.experience-job-row
+                  li.experience-job-item.title 工作內容：
+                  li.experience-job-item 1.新首頁改版 (Html、Scss、jQuery 切版)
+                  li.experience-job-item 2.新哈啦區改版 UI 設計 Website / mobile / App 
+                  li.experience-job-item 3.行銷網頁設計 + 切版
+                  li.experience-job-item 4.站內服務優化及維運
+                  li.experience-job-item 5.行銷宣傳物視覺製作
+              li.experience-item
+                .experience-link.animate
+                  .experience-content
+                    .experience-left
+                      .experience-title 程式設計人員 - 襄理
+                      .experience-company 永豐商業銀行
+                    .experience-right
+                      .experience-date 2023/05 - 2023/09
+                      span.material-icons-round.expand-icon expand_more
+                ol(style="display: none").experience-job-row
+                  li.experience-job-item.title 工作內容：
+                  li.experience-job-item 1.永豐銀行網銀、行銀維運
+                  li.experience-job-item 2.永豐大戶 App、大咖 App Webview 切版
+                  li.experience-job-item 3.行銷活動頁切版、舊網頁維運更新
+                  li.experience-job-item 4.App UI 介面檢測 / 畫面問題提出
+                  li.experience-job-item 5.交付廠商開發與進度追蹤
+              li.experience-item
+                .experience-link.animate
+                  .experience-content
+                    .experience-left
+                      .experience-title 網頁設計師
+                      .experience-company 三立新聞網
+                    .experience-right
+                      .experience-date 2020/11 - 2023/04
+                      span.material-icons-round.expand-icon expand_more
+                ol(style="display: none").experience-job-row
+                  li.experience-job-item.title 工作內容：
+                  li.experience-job-item 1.新聞網改版 / 子網站維運及更新 / 大型選舉開票網站
+                  li.experience-job-item 2.活動網頁 / 大事紀新聞專題頁
+                  li.experience-job-item 3.配合組內設計師網頁協助切版
+                  li.experience-job-item 4.節目及影音素材製作物
+                  li.experience-job-item 5.廣宣製作物 / 重大新聞專題頁 / 節慶電子賀卡
+                  li.experience-job-item 6.協助主管安排 PT 設計製作、工作進度追蹤
+              li.experience-item
+                .experience-link.animate
+                  .experience-content
+                    .experience-left
+                      .experience-title 網頁設計
+                      .experience-company 利百加旅行社
+                    .experience-right
+                      .experience-date 2020/03 - 2020/10
+                      span.material-icons-round.expand-icon expand_more
+                ol(style="display: none").experience-job-row
+                  li.experience-job-item.title 工作內容：
+                  li.experience-job-item 1.日本旅遊各線網站
+                  li.experience-job-item 2.旅遊網誌網站
+                  li.experience-job-item 3.廣宣視覺製作
+              li.experience-item
+                .experience-link.animate
+                  .experience-content
+                    .experience-left
+                      .experience-title 平面設計與企劃
+                      .experience-company 協益旅行社
+                    .experience-right
+                      .experience-date 2018/05 - 2019/11
+                      span.material-icons-round.expand-icon expand_more
+                ol(style="display: none").experience-job-row
+                  li.experience-job-item.title 工作內容：
+                  li.experience-job-item 1.旅遊網站視覺設計
+                  li.experience-job-item 2.旅遊行程企劃撰寫
+                  li.experience-job-item 3.平面宣傳製作物
+                  li.experience-job-item 4.社群媒體經營管理
+                  li.experience-job-item 5.廣告投放數據分析
+      section.section.section-project#project
+        .container
+          .content
+            .heading
+              h2.section-title.text-center.animate.animate_fadeDown 專案作品
+              p.section-sec-title.text-center.animate.animate_fadeDown.animate_delay100 PORTFOLIO
+            ul.tab-row.animate.animate_fadeLeft.animate_delay200
+              li(data-target="#tab-front").tab-item.is-active 前端網頁
+              li.tab-item
+              li(data-target="#tab-marketing").tab-item 行銷網頁
+            .project-row.swiper.project-slide.has-fade-after.animate.animate_fadeLeft.animate_delay300#tab-front
+              .swiper-wrapper
+                .swiper-slide
+                  a.project-item(href="https://www.gamer.com.tw/" target="_blank") 
+                    img.project-img(src="./images/img-ui-01.jpg", alt="巴哈姆特首頁")
+                    h3.project-name 巴哈姆特 - 首頁改版
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="./bahamut/hardware-list/post.html" target="_blank") 
+                    img.project-img(src="./images/img-ui-02.jpg", alt="巴哈姆特 x 欣亞數位")
+                    h3.project-name.text-center 巴哈姆特 x 欣亞數位
+                      br 
+                      |電腦應用板插入估價單介面
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="javascript:void(0);" target="_blank") 
+                    img.project-img(src="./images/img-ui-03.jpg", alt="GNN 新聞動態留言")
+                    h3.project-name GNN 新聞 - 動態留言改版
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://apply.sinopac.com/PersonalLoans/PersonalLoans/Index" target="_blank")
+                    img.project-img(src="./images/img-ui-04.jpg", alt="永豐銀行 雲端信貸")
+                    h3.project-name 永豐銀行 - 雲端信貸
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://funcashier.sinopac.com/digital_payment/donation.html" target="_blank") 
+                    img.project-img(src="./images/img-ui-05.jpg", alt="永豐銀行 數位支付整合服務")
+                    h3.project-name 永豐銀行 - 數位支付整合服務
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="./setnNews/setn/index.html" target="_blank") 
+                    img.project-img(src="./images/img-ui-06.jpg", alt="三立新聞網 首頁改版")
+                    h3.project-name 三立新聞網 - 首頁改版提案
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://www.setn.com/elect/2022vote/index.aspx" target="_blank") 
+                    img.project-img(src="./images/img-ui-07.jpg", alt="2022 九合一大選")
+                    h3.project-name 三立新聞網 - 2022 九合一大選
+                    .border.border-before
+                    .border.border-after
+              .swiper-button-prev
+              .swiper-button-next
+            .project-row.swiper.project-slide.has-fade-after.animate.animate_fadeLeft.animate_delay300#tab-marketing(style="display: none")
+              .swiper-wrapper
+                .swiper-slide
+                  a.project-item(href="https://prj.gamer.com.tw/daren/index.php" target="_blank") 
+                    img.project-img(src="./images/img-marketing-01.jpg", alt="創作達人形象頁")
+                    h3.project-name 創作達人形象頁
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://prj.gamer.com.tw/forum/20y/" target="_blank") 
+                    img.project-img(src="./images/img-marketing-02.jpg", alt="勇者造型 20 週年活動頁")
+                    h3.project-name.text-center 勇者造型 20 週年活動頁
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://bank.sinopac.com/sinopacBT/webevents/2308_trust/" target="_blank") 
+                    img.project-img(src="./images/img-marketing-03.jpg", alt="永豐銀行 信託大冒險")
+                    h3.project-name 永豐銀行 - 信託大冒險
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://acts.setn.com/event/newyear2023/" target="_blank") 
+                    img.project-img(src="./images/img-marketing-04.jpg", alt="2023 跨年晚會直播頁")
+                    h3.project-name 2023 跨年晚會直播頁
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://acts.setn.com/event/2022hotpot/index.html" target="_blank") 
+                    img.project-img(src="./images/img-marketing-05.jpg", alt="今晚這鍋好")
+                    h3.project-name 今晚這鍋好
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="./setnNews/vidolGhost/index.html" target="_blank") 
+                    img.project-img(src="./images/img-marketing-06.jpg", alt="鬼滅之刃台劇版")
+                    h3.project-name 鬼滅之刃台劇版
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://acts.setn.com/event/2022summerdrinkparty/" target="_blank") 
+                    img.project-img(src="./images/img-marketing-07.jpg", alt="這夏冷涼卡好")
+                    h3.project-name 這夏冷涼卡好
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://acts.setn.com/event/2022hodala/" target="_blank") 
+                    img.project-img(src="./images/img-marketing-08.jpg", alt="年終虎打啦")
+                    h3.project-name 年終虎打啦
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://acts.setn.com/event/2022classtest/index.html" target="_blank") 
+                    img.project-img(src="./images/img-marketing-09.jpg", alt="看新聞聰明點")
+                    h3.project-name 看新聞聰明點
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://borderless.setn.com/" target="_blank") 
+                    img.project-img(src="./images/img-marketing-10.jpg", alt="2030沉沒倒數")
+                    h3.project-name 2030沉沒倒數
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://acts.setn.com/event/2021delicious10/" target="_blank") 
+                    img.project-img(src="./images/img-marketing-11.jpg", alt="10全食美")
+                    h3.project-name 10全食美
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="./setnNews/56gbavote/index.html" target="_blank") 
+                    img.project-img(src="./images/img-marketing-12.jpg", alt="猜金專家")
+                    h3.project-name 猜金專家
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://acts.setn.com/event/2021UFO/" target="_blank") 
+                    img.project-img(src="./images/img-marketing-13.jpg", alt="世界幽浮日")
+                    h3.project-name 世界幽浮日
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="javascript:void(0);" target="_blank") 
+                    img.project-img(src="./images/img-marketing-14.jpg", alt="本月V劇星")
+                    h3.project-name 本月V劇星
+                    .border.border-before
+                    .border.border-after
+                .swiper-slide
+                  a.project-item(href="https://setmoneyqa.azurewebsites.net/event/setnapp2021/" target="_blank") 
+                    img.project-img(src="./images/img-marketing-15.jpg", alt="安心迎夏MrQ")
+                    h3.project-name 安心迎夏MrQ
+                    .border.border-before
+                    .border.border-after
+              .swiper-button-prev
+              .swiper-button-next
+            a.btn.btn-primary.animate.animate_fadeDown.animate_delay300(href="javascript:void(0);") 更多作品
+      section.section.section-soho#soho
+        .container
+          .content
+            .heading
+              h2.section-title.text-center.animate.animate_fadeDown 接案作品
+              p.section-sec-title.text-center.animate.animate_fadeDown.animate_delay100 SOHO
+            .soho-grid
+              a.soho-item.project-item.animate.animate_fadeLeft.animate_delay200(href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20250325J/index.html" target="_blank")
+                img.project-img(src="./images/img-soho-05.jpg", alt="阿祖雷特")
+                h3.project-name 波拉西亞戰記 - 阿祖雷特
+                .border.border-before
+                .border.border-after
+              a.soho-item.project-item.animate.animate_fadeLeft.animate_delay200(href="./soho/christmasBattle/index.html" target="_blank")
+                img.project-img(src="./images/img-soho-04.jpg", alt="聖誕夜")
+                h3.project-name 波拉西亞戰記 - 聖誕夜
+                .border.border-before
+                .border.border-after
+              a.soho-item.project-item.animate.animate_fadeRight.animate_delay200(href="https://tw.hicdn.beanfun.com/beanfun/promo/Mabi/20250619J-freeseason/index.html" target="_blank")
+                img.project-img(src="./images/img-soho-01.jpg", alt="FWFREESEASON")
+                h3.project-name 新瑪奇 - FWFREESEASON
+                .border.border-before
+                .border.border-after
+              a.soho-item.project-item.animate.animate_fadeLeft.animate_delay300(href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20250605C/index.html" target="_blank")
+                img.project-img(src="./images/img-soho-02.jpg", alt="新職業：深淵放逐者")
+                h3.project-name 波拉西亞戰記 - 深淵放逐者
+                .border.border-before
+                .border.border-after
+              a.soho-item.project-item.animate.animate_fadeRight.animate_delay300(href="https://tw.hicdn.beanfun.com/beanfun/promo/TWP/20241022J/index.html" target="_blank")
+                img.project-img(src="./images/img-soho-03.jpg", alt="被束縛的帕拿斯")
+                h3.project-name 波拉西亞戰記 - 被束縛的帕拿斯
+                .border.border-before
+                .border.border-after
+      footer.footer
+        .container
+          .footer-content
+            
+            a.footer-link(href="#")
+              span.material-icons-round mail_outline
+              |nj.huang2.0@gmail.com
+            .copy-right All Content © Copyright  2025
+
+
