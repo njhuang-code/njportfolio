@@ -1,0 +1,34 @@
+extends _layout.pug
+
+block vars
+  - var isHome = false
+  - var alertText = false
+  - var websiteUrl = 'https://gnn.gamer.com.tw/detail.php?sn=288201'
+  - var urlBlank = '_blank'
+  - var loadText = 'Figma 載入可能需要一點時間，請稍候。'
+
+block content
+  main.main-content
+    .section-case
+      .case-head
+        .container
+          .content
+            h1.case-heading GNN 新聞留言改版
+            if alertText
+              span.case-alert 以下連結僅供切版測試與展示用途，故呈現的內容屬於非正式版本。
+            a.case-link(href=websiteUrl target=urlBlank)=websiteUrl
+      .case-body 
+        .container
+          .case-row
+            .case-item
+              p.case-msg Before
+              img(src="./images/bahacase/baha-gnn-before.png", alt="")
+            .case-item
+              p.case-msg After
+              img(src="./images/bahacase/baha-gnn-after.png", alt="")
+          .case-column
+            .case-item
+              .case-msg App UI
+              .case-text=loadText
+              .iframe-container
+                iframe.iframe(src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/Hig4Cae6kM1dIA9b9lmgGt/GNN-%E6%96%B0%E8%81%9E%E5%8B%95%E6%85%8B%E7%95%99%E8%A8%80?node-id=1-673&t=KSc3l3kRF5plDhDa-1" allowfullscreen)

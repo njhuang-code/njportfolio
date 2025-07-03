@@ -1,0 +1,27 @@
+extends _layout.pug
+
+block vars
+  - var isHome = false
+  - var alertText = false
+  - var websiteUrl = 'https://www.gamer.com.tw/'
+  - var urlBlank = '_blank'
+
+block content
+  main.main-content
+    .section-case
+      .case-head
+        .container
+          .content
+            h1.case-heading 巴哈姆特首頁改版
+            if alertText
+              span.case-alert 此畫面僅供切版測試與展示用途，主要因正式網站資料遺失或尚未建置完成，故目前呈現的內容屬於非正式版本。
+          a.case-link(href=websiteUrl target=urlBlank)=websiteUrl
+      .case-body 
+        .container
+          .case-row
+            .case-item
+              p.case-msg Before
+              img(src="./images/bahacase/baha-index-before.png", alt="")
+            .case-item
+              p.case-msg After
+              img(src="./images/bahacase/baha-index-after.jpg", alt="")

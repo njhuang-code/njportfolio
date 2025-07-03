@@ -47,15 +47,19 @@ html(lang="zh-Hant")
       if hasSwiper
         link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
       link(rel="stylesheet", href="./css/style.css")
+      style.
+        body[scroll-block] {
+          overflow: hidden;
+        }
   body
+    - var prefix = (typeof isHome !== 'undefined' && isHome) ? '' : 'index.html'
     block nav
-    
       nav.menu
         ul.menu-row.container
-          li.menu-item: a.menu-link(href="#skill") 關於NJ
-          li.menu-item: a.menu-link(href="#experience") 工作經歷
-          li.menu-item: a.menu-link(href="#project") 專案作品
-          li.menu-item: a.menu-link(href="#soho") 接案經歷
+          li.menu-item: a.menu-link(href=`${prefix}#skill`) 關於NJ
+          li.menu-item: a.menu-link(href=`${prefix}#experience`) 工作經歷
+          li.menu-item: a.menu-link(href=`${prefix}#project`) 專案作品
+          li.menu-item: a.menu-link(href=`${prefix}#soho`) 接案作品
     block content
     block script
       script(src="./js/jquery-3.7.1.min.js")

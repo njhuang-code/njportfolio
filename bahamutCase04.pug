@@ -1,0 +1,24 @@
+extends _layout.pug
+
+block vars
+  - var isHome = false
+  - var alertText = false
+  - var websiteUrl = 'https://prj.gamer.com.tw/daren/index.php'
+  - var urlBlank = '_blank'
+  - var loadText = 'Figma 載入可能需要一點時間，請稍候。'
+
+block content
+  main.main-content
+    .section-case
+      .case-head
+        .container
+          .content
+            h1.case-heading 創作達人形象頁
+            if alertText
+              span.case-alert 以下連結僅供切版測試與展示用途，故呈現的內容屬於非正式版本。
+            a.case-link(href=websiteUrl target=urlBlank)=websiteUrl
+      .case-body 
+        .container
+          ul.case-row
+            li.case-item
+              img(src="./images/bahacase/baha-daren.jpg", alt="")

@@ -22,6 +22,10 @@
     height: 60px;
   }
   .menu-link {
+    &.is-active {
+      color: $primary-text;
+      font-weight: 500;
+    }
     @include hover-only {
       &:hover {
         color: $primary-text;
@@ -461,5 +465,77 @@
     .project-img {
       @include size(100%);
     }
+  }
+}
+
+// case style
+
+.section-case {
+  @include flex-column;
+  gap: px-rem(40);
+  padding-bottom: px-rem(60);
+  .content {
+    gap: px-rem(8);
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.case-head {
+  padding-top: px-rem(48);
+  text-align: center;
+  .case-heading {
+    font-size: px-rem(52);
+    font-weight: 900;
+  }
+  .case-link {
+    color: $primary-text;
+    font-size: px-rem(18);
+    @include hover-only {
+      &:hover {
+        color: $third-text;
+      }
+    }
+  }
+}
+
+.case-body {
+  .case-column {
+    @include flex-column;
+    gap: px-rem(16);
+  }
+  .case-row {
+    display: flex;
+    justify-content: center;
+    gap: px-rem(16)
+  }
+  .case-item {
+    margin-top: px-rem(16);
+  }
+  .case-msg {
+    font-size: px-rem(24);
+    font-weight: 700;
+    text-align: center;
+  }
+  .case-text {
+    font-size: px-rem(20);
+    color: #cccccc;
+    text-align: center;
+    margin-bottom: px-rem(12);
+  }
+  .iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+  .iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
   }
 }

@@ -1,126 +1,110 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const hasHash = window.location.hash && window.location.hash.length > 1;
+
+  if (hasHash) {
+    document.body.setAttribute('scroll-block', '');
+
+    setTimeout(() => {
+      const targetEl = document.querySelector(window.location.hash);
+      if (targetEl) {
+        window.scrollTo({
+          top: targetEl.getBoundingClientRect().top + window.scrollY,
+          left: 0,
+          behavior: 'auto'
+        });
+      }
+
+      // ✅ 解鎖畫面
+      document.body.removeAttribute('scroll-block');
+    }, 0);
+  } else {
+    gsapAni();
+  }
+});
+
+
 function gsapAni() {
   gsap
     .timeline({
       delay: 0.7,
+      onStart: function () {
+        if (!window.location.hash) {
+          window.scrollTo(0, 0);
+        }
+      },
       onComplete: function () {
         gsap
           .timeline({ delay: 0.5, repeat: -1, repeatDelay: 2 })
-          // .from(
-          //   ".kv-title",
-          //   {
-          //     scale: 0,
-          //     opacity: 0,
-          //     duration: 1.5,
-          //     ease: "elastic.out(1, 0.35)",
-          //     clearProps: "all",
-          //   },
-          //   "kvStart+=0.5"
-          // )
-          .from(
-            ".sloganImg",
-            {
-              scale: 0,
-              opacity: 0,
-              duration: 1.5,
-              ease: "elastic.out(1, 0.35)",
-              clearProps: "all",
-              stagger: 0.8,
+          .from(".sloganImg", {
+            scale: 0,
+            opacity: 0,
+            duration: 1.5,
+            ease: "elastic.out(1, 0.35)",
+            clearProps: "all",
+            stagger: 0.8,
+          }, "kvStart+=2.1")
+          .from(".kv-deco-box > .skill", {
+            scale: 0,
+            opacity: 0,
+            duration: 1.5,
+            ease: "elastic.out(1, 0.35)",
+            clearProps: "all",
+            stagger: {
+              each: 0.2,
+              from: "random",
             },
-            "kvStart+=2.1"
-          )
-          .from(
-            ".kv-deco-box > .skill",
-            { 
-              scale: 0,
-              opacity: 0,
-              duration: 1.5,
-              ease: "elastic.out(1, 0.35)",
-              clearProps: "all",
-              stagger: 0.8,
-              stagger: {
-                each: 0.2,
-                from: "random",
-              },
-            
-            },
-            "kvStart+=0.5"
-          );
-      },
-      onStart: function () {
-        window.scrollTo(0, 0);
+          }, "kvStart+=0.5");
       },
     })
     .addLabel("kvStart")
-    .from(
-      ".kv-title",
-      {
-        opacity: 0,
-        scale: 0,
-        ease: "elastic.out(1, 0.35)",
-        duration: 0.8,
-        clearProps: "all",
-      },
-      "kvStart+=0.5"
-    )
-    .from(
-      ".kv-sec-title",
-      {
-        scale: 0,
-        opacity: 0,
-        duration: 1.85,
-        ease: "elastic.out(1, 0.35)",
-        clearProps: "all",
-      },
-      "kvStart+=1"
-    )
-    .from('.kv-desc ', {
-      y: '-100%',
+    .from(".kv-title", {
+      opacity: 0,
+      scale: 0,
+      ease: "elastic.out(1, 0.35)",
+      duration: 0.8,
+      clearProps: "all",
+    }, "kvStart+=0.5")
+    .from(".kv-sec-title", {
+      scale: 0,
+      opacity: 0,
+      duration: 1.85,
+      ease: "elastic.out(1, 0.35)",
+      clearProps: "all",
+    }, "kvStart+=1")
+    .from(".kv-desc", {
+      y: "-100%",
       opacity: 0,
       ease: "elastic.out(1, 0.35)",
       duration: 1.25,
-      clearProps: 'all',
-    },
-      "kvStart+=1.5"
-    )
-    .from(
-      ".kv-deco-box > .skill",
-      {
-        scale: 0,
-        ease: "elastic.out(1, 0.35)",
-        duration: 1.5,
-        stagger: 0.8,
-        clearProps: "all",
-        stagger: {
-          each: 0.2,
-          from: "random",
-        },
-      
+      clearProps: "all",
+    }, "kvStart+=1.5")
+    .from(".kv-deco-box > .skill", {
+      scale: 0,
+      ease: "elastic.out(1, 0.35)",
+      duration: 1.5,
+      clearProps: "all",
+      stagger: {
+        each: 0.2,
+        from: "random",
       },
-      "kvStart+=0.5"
-    )
-    .from(
-      '.kv-visual',
-      {
-      y: '-100%',
+    }, "kvStart+=0.5")
+    .from(".kv-visual", {
+      y: "-100%",
       opacity: 0,
       ease: "elastic.out(1, 0.35)",
       duration: 1.5,
-      clearProps: 'all'
-    },
-    "kvStart+=0.8"
-    )
-    .from(
-      ".kv-scroll",
-      {
-        y: '-100%',
-        opacity: 0,
-        ease: "elastic.out(1, 0.35)",
-        duration: 1.5,
-        clearProps: 'all'
-      },
-      "kvStart+=1.25"
-    );
+      clearProps: "all"
+    }, "kvStart+=0.8")
+    .from(".kv-scroll", {
+      y: "-100%",
+      opacity: 0,
+      ease: "elastic.out(1, 0.35)",
+      duration: 1.5,
+      clearProps: "all"
+    }, "kvStart+=1.25");
 }
+
+
 
 document.querySelectorAll('.project-slide').forEach((el, index) => {
   const swiper = new Swiper(el, {
@@ -140,9 +124,8 @@ document.querySelectorAll('.project-slide').forEach((el, index) => {
     },
 
     on: {
-      // 每次滑動都觸發（含手動或點箭頭）
       slideChange: function () {
-        const wrapper = el.closest('.project-row'); // 最外層容器
+        const wrapper = el.closest('.project-row');
         if (this.isEnd) {
           wrapper.classList.remove('has-fade-after');
         } else {
@@ -150,7 +133,6 @@ document.querySelectorAll('.project-slide').forEach((el, index) => {
         }
       },
 
-      // 初始化就判斷一次（避免一開始就顯示在底）
       afterInit: function () {
         const wrapper = el.closest('.project-row');
         if (this.isEnd) {
@@ -194,8 +176,7 @@ $(document).ready(function () {
 
 
 $(function () {
-
-  // scrollAnim // 
+  // scrollAnim
   var pageTop;
   var pageBottom;
   var activeOffset = 30;
@@ -219,21 +200,66 @@ $(function () {
 });
 
 
-$('[href^="#"]').on('click', function (e) {
-  const targetId = $(this).attr('href');
-  
-  // 排除 href="#" 或空字串
-  if (targetId.length > 1) {
-    e.preventDefault();
-    const target = $(targetId);
+$(function () {
+  const headerHeight = 60;
+  const navLinks = $('nav.menu ul.menu-row.container a.menu-link[href^="#"]');
 
-    if (target.length) {
-      const headerHeight = 60; // 如果有固定 header 請改這個值
-      const scrollTop = target.offset().top - headerHeight;
+  // 收集對應區塊（nav 連結目標）
+  const sections = navLinks.map(function () {
+    const targetId = $(this).attr('href');
+    return $(targetId).length ? $(targetId)[0] : null;
+  });
 
-      $('html, body').animate({
-        scrollTop: scrollTop
-      }, 800);
+  // nav 點擊平滑滾動 + 加 active
+  navLinks.on('click', function (e) {
+    const targetId = $(this).attr('href');
+
+    if (targetId.length > 1) {
+      e.preventDefault();
+
+      const target = $(targetId);
+      if (target.length) {
+        const scrollTop = target.offset().top - headerHeight;
+
+        navLinks.removeClass('is-active');
+        $(this).addClass('is-active');
+
+        $('html, body').animate({ scrollTop: scrollTop }, 800);
+      }
     }
-  }
+  });
+
+  // kv-scroll 按鈕點擊，只平滑滾動，不動 .is-active
+  $('.kv-scroll').on('click', function (e) {
+    e.preventDefault();
+    const target = $('#skill');
+    if (target.length) {
+      const scrollTop = target.offset().top - headerHeight;
+      $('html, body').animate({ scrollTop: scrollTop }, 800);
+    }
+  });
+
+  // 滾動監聽，動態切換 nav active（不包含 kv-scroll）
+  $(window).on('scroll', function () {
+    const scrollPos = $(window).scrollTop() + headerHeight + 1;
+
+    let currentId = null;
+
+    sections.each(function () {
+      if ($(this).offset().top <= scrollPos) {
+        currentId = this.id;
+      }
+    });
+
+    if (currentId) {
+      navLinks.removeClass('is-active');
+      navLinks.filter(`[href="#${currentId}"]`).addClass('is-active');
+    }
+  });
+
+  // 頁面載入先觸發一次滾動事件，確保狀態正確
+  $(window).trigger('scroll');
 });
+
+
+

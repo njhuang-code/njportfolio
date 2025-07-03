@@ -1,0 +1,27 @@
+extends _layout.pug
+
+block vars
+  - var isHome = false
+  - var alertText = false
+  - var websiteUrl = ''
+  - var urlBlank = '_blank'
+  - var loadText = 'Figma 載入可能需要一點時間，請稍候。'
+
+block content
+  main.main-content
+    .section-case
+      .case-head
+        .container
+          .content
+            h1.case-heading 勇者造型 20 週年紀念活動
+            if alertText
+              span.case-alert 以下連結僅供切版測試與展示用途，故呈現的內容屬於非正式版本。
+            a.case-link(href="https://prj.gamer.com.tw/forum/20y/" target=urlBlank) 活動主頁
+            a.case-link(href="https://prj.gamer.com.tw/forum/20y/talent.php" target=urlBlank) 天職測驗
+      .case-body 
+        .container
+          ul.case-column
+            li.case-item
+              img(src="./images/bahacase/baha-skin01.jpg", alt="")
+            li.case-item
+              img(src="./images/bahacase/baha-skin02.jpg", alt="")

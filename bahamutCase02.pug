@@ -1,0 +1,33 @@
+extends _layout.pug
+
+block vars
+  - var isHome = false
+  - var alertText = true
+  - var websiteUrl = ''
+  - var urlBlank = '_blank'
+  - var loadText = 'Figma 載入可能需要一點時間，請稍候。'
+
+block content
+  main.main-content
+    .section-case
+      .case-head
+        .container
+          .content
+            h1.case-heading 電腦應用板插入估價單
+            if alertText
+              span.case-alert 以下連結僅供切版測試與展示用途，故呈現的內容屬於非正式版本。
+            a.case-link(href="./bahamut/hardware-list/post.html" target=urlBlank) 切版測試畫面 - 發文頁
+            a.case-link(href="./bahamut/hardware-list/C.html" target=urlBlank) 切版測試畫面 - 文章頁
+      .case-body 
+        .container
+          .case-column
+            .case-item
+              .case-msg Website UI
+              .case-text=loadText
+              .iframe-container
+                iframe.iframe(src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/cTG6u6mKFMXkw9RxXrZwiT/%E5%B7%B4%E5%93%88%E5%A7%86%E7%89%B9-x-%E6%AC%A3%E4%BA%9E%E6%8F%92%E5%85%A5%E4%BC%B0%E5%83%B9%E5%96%AE-Website?node-id=0-1&t=as8KUUBgMk7pYSiw-1" allowfullscreen)
+            .case-item
+              .case-msg App UI
+              .case-text=loadText
+              .iframe-container
+                iframe.iframe(src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/O76sALsJRqYuL7d4UaHUEp/%E5%B7%B4%E5%93%88%E5%A7%86%E7%89%B9-x-%E6%AC%A3%E4%BA%9E%E6%8F%92%E5%85%A5%E4%BC%B0%E5%83%B9%E5%96%AE-App?node-id=1-789&t=8ONYy9lj8ljnmtDB-1" allowfullscreen)

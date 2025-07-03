@@ -26,6 +26,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+      body[scroll-block] {
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
     <nav class="menu">
@@ -33,7 +38,7 @@
         <li class="menu-item"><a class="menu-link" href="#skill">關於NJ</a></li>
         <li class="menu-item"><a class="menu-link" href="#experience">工作經歷</a></li>
         <li class="menu-item"><a class="menu-link" href="#project">專案作品</a></li>
-        <li class="menu-item"><a class="menu-link" href="#soho">接案經歷</a></li>
+        <li class="menu-item"><a class="menu-link" href="#soho">接案作品</a></li>
       </ul>
     </nav>
     <main>
@@ -81,7 +86,7 @@
               <div class="about-content">
                 <div class="about-left"><img class="code-left animate animate_fadeLeft animate_delay500" src="./images/img-s2-code.svg" alt="code"><img class="code-right animate animate_fadeRight animate_delay300" src="./images/img-s2-code.svg" alt="code"><img class="about-visual animate animate_fadeLeft animate_delay200" src="./images/img-s2-visual.svg" alt="NJ"></div>
                 <ul class="about-right"> 
-                  <li class="about-text animate animate_fadeRight animate_delay200">我是楠鈞(NJ)，目前任職於巴哈姆特電玩資訊站擔任 UI Designer，負責本站所有介面(Website、App)設計、網頁切版，並針對老舊頁面進行優化改版。期間經手專案包含：首頁改版、電應板插入估價單、GNN 留言系統優化等等...前期使用 Figma 設計，再利用 HTML、Scss 進行切版，也會運用 jQuery 或 簡易的 Javascript 設計動畫及功能操作。除了網頁能夠獨立設計、切版之外，也必須同時與 iOS 、安卓工程師協作開發 App UI。</li>
+                  <li class="about-text animate animate_fadeRight animate_delay200">我是楠鈞(NJ)，目前任職於巴哈姆特電玩資訊站擔任 UI Designer，負責本站所有介面(Website、App)設計、網頁切版，並針對老舊頁面進行優化改版。期間經手專案包含：首頁改版、電應板插入估價單、GNN 留言系統優化等等...前期使用 Figma 設計，再利用 HTML、Scss 進行切版，也會運用 jQuery 或 Javascript 設計動畫及功能操作。除了網頁能夠獨立設計、切版之外，也必須同時與 iOS 、安卓工程師協作開發 App UI。</li>
                   <li class="about-text animate animate_fadeRight animate_delay200">上一份工作任職於永豐銀行擔任程式設計人員，主要專注於前端開發。負責網銀、行銀及 App 前端 Webview 切版、維運和改版工作。會使用到 Pug 和 Sass 來製作樣板，提高切版效率，並利用 Javascript、GSAP 撰寫互動特效，同時使用 Prepros、Gulp 進行環境開發打包，以及 Git 版控。除了獨立開發，也參與團隊協作，完成大型專案並與跨部門溝通，例如：雲端信貸、大咖 App、新大戶 App。</li>
                   <li class="about-text about-text animate animate_fadeRight animate_delay300">近年除了日常工作，也會利用下班、假日時間接案與進修網頁課程，來提升切版效率以及專案管理能力，也將這些經歷適時地運用到專案上，藉此優化、改善 UIUX，並給使用者更順暢的瀏覽體驗。</li>
                   <li class="about-tag-box about-text animate animate_fadeRight animate_delay500">
@@ -224,15 +229,15 @@
               </ul>
               <div class="project-row swiper project-slide has-fade-after animate animate_fadeLeft animate_delay300" id="tab-front">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><a class="project-item" href="https://www.gamer.com.tw/" target="_blank"> <img class="project-img" src="./images/img-ui-01.jpg" alt="巴哈姆特首頁">
+                  <div class="swiper-slide"><a class="project-item" href="./bahamutCase01.html" target="_blank"> <img class="project-img" src="./images/img-ui-01.jpg" alt="巴哈姆特首頁">
                       <h3 class="project-name">巴哈姆特 - 首頁改版</h3>
                       <div class="border border-before"></div>
                       <div class="border border-after"></div></a></div>
-                  <div class="swiper-slide"><a class="project-item" href="./bahamut/hardware-list/post.html" target="_blank"> <img class="project-img" src="./images/img-ui-02.jpg" alt="巴哈姆特 x 欣亞數位">
+                  <div class="swiper-slide"><a class="project-item" href="./bahamutCase02.html" target="_blank"> <img class="project-img" src="./images/img-ui-02.jpg" alt="巴哈姆特 x 欣亞數位">
                       <h3 class="project-name text-center">巴哈姆特 x 欣亞數位<br>電腦應用板插入估價單介面</h3>
                       <div class="border border-before"></div>
                       <div class="border border-after"></div></a></div>
-                  <div class="swiper-slide"><a class="project-item" href="javascript:void(0);" target="_blank"> <img class="project-img" src="./images/img-ui-03.jpg" alt="GNN 新聞動態留言">
+                  <div class="swiper-slide"><a class="project-item" href="./bahamutCase03.html" target="_blank"> <img class="project-img" src="./images/img-ui-03.jpg" alt="GNN 新聞動態留言">
                       <h3 class="project-name">GNN 新聞 - 動態留言改版</h3>
                       <div class="border border-before"></div>
                       <div class="border border-after"></div></a></div>
@@ -258,11 +263,11 @@
               </div>
               <div class="project-row swiper project-slide has-fade-after animate animate_fadeLeft animate_delay300" id="tab-marketing" style="display: none">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><a class="project-item" href="https://prj.gamer.com.tw/daren/index.php" target="_blank"> <img class="project-img" src="./images/img-marketing-01.jpg" alt="創作達人形象頁">
+                  <div class="swiper-slide"><a class="project-item" href="./bahamutCase04.html" target="_blank"> <img class="project-img" src="./images/img-marketing-01.jpg" alt="創作達人形象頁">
                       <h3 class="project-name">創作達人形象頁</h3>
                       <div class="border border-before"></div>
                       <div class="border border-after"></div></a></div>
-                  <div class="swiper-slide"><a class="project-item" href="https://prj.gamer.com.tw/forum/20y/" target="_blank"> <img class="project-img" src="./images/img-marketing-02.jpg" alt="勇者造型 20 週年活動頁">
+                  <div class="swiper-slide"><a class="project-item" href="./bahamutCase05.html" target="_blank"> <img class="project-img" src="./images/img-marketing-02.jpg" alt="勇者造型 20 週年活動頁">
                       <h3 class="project-name text-center">勇者造型 20 週年活動頁</h3>
                       <div class="border border-before"></div>
                       <div class="border border-after"></div></a></div>
@@ -308,10 +313,6 @@
                       <div class="border border-after"></div></a></div>
                   <div class="swiper-slide"><a class="project-item" href="https://acts.setn.com/event/2021UFO/" target="_blank"> <img class="project-img" src="./images/img-marketing-13.jpg" alt="世界幽浮日">
                       <h3 class="project-name">世界幽浮日</h3>
-                      <div class="border border-before"></div>
-                      <div class="border border-after"></div></a></div>
-                  <div class="swiper-slide"><a class="project-item" href="javascript:void(0);" target="_blank"> <img class="project-img" src="./images/img-marketing-14.jpg" alt="本月V劇星">
-                      <h3 class="project-name">本月V劇星</h3>
                       <div class="border border-before"></div>
                       <div class="border border-after"></div></a></div>
                   <div class="swiper-slide"><a class="project-item" href="https://setmoneyqa.azurewebsites.net/event/setnapp2021/" target="_blank"> <img class="project-img" src="./images/img-marketing-15.jpg" alt="安心迎夏MrQ">

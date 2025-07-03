@@ -297,6 +297,10 @@ button {
   width: 100%;
   height: 60px;
 }
+.menu .menu-link.is-active {
+  color: #2B62E1;
+  font-weight: 500;
+}
 @media (any-hover: hover) {
   .menu .menu-link:hover {
     color: #2B62E1;
@@ -907,6 +911,94 @@ button {
 .section-soho .soho-item .project-img {
   width: 100%;
   height: 100%;
+}
+
+.section-case {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  padding-bottom: 3.75rem;
+}
+.section-case .content {
+  gap: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.case-head {
+  padding-top: 3rem;
+  text-align: center;
+}
+.case-head .case-heading {
+  font-size: 3.25rem;
+  font-weight: 900;
+}
+.case-head .case-link {
+  color: #2B62E1;
+  font-size: 1.125rem;
+}
+@media (any-hover: hover) {
+  .case-head .case-link:hover {
+    color: #7EAAF6;
+  }
+}
+
+.case-body .case-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.case-body .case-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+.case-body .case-item {
+  margin-top: 1rem;
+}
+.case-body .case-msg {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.case-body .case-text {
+  font-size: 1.25rem;
+  color: #cccccc;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+.case-body .iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+.case-body .iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
 }
 
 @-webkit-keyframes aniMarquee {
