@@ -1461,6 +1461,23 @@
       });
     });
   </script>
+  <script>
+    $('<p>', {
+      class: 'alertText',
+      text: '此畫面僅供切版測試與展示用途，主要因正式網站資料遺失或尚未建置完成，故目前呈現的內容屬於非正式版本。',
+      css: {
+        fontSize: '16px',
+        position: 'fixed',
+        top: '0px',
+        left: '0px',
+        width: '100%',
+        background: '#a8071a',
+        color: '#ffffff',
+        textAlign: 'center',
+        zIndex: 9999
+      }
+    }).appendTo('body');
+  </script>
 </body>
 
 </html>

@@ -490,7 +490,6 @@
   }
   .case-link {
     color: $primary-text;
-    font-size: px-rem(18);
     @include hover-only {
       &:hover {
         color: $third-text;
@@ -502,7 +501,8 @@
 .case-body {
   .case-column {
     @include flex-column;
-    gap: px-rem(16);
+    gap: px-rem(36);
+    margin-top: px-rem(36);
   }
   .case-row {
     display: flex;
@@ -511,16 +511,19 @@
   }
   .case-item {
     margin-top: px-rem(16);
+    flex: 0 0 50%;
   }
   .case-msg {
     font-size: px-rem(24);
     font-weight: 700;
     text-align: center;
+    margin-bottom: px-rem(16);
   }
   .case-text {
     font-size: px-rem(20);
-    color: #cccccc;
+    color: $gray-text;
     text-align: center;
+    font-weight: 500;
     margin-bottom: px-rem(12);
   }
   .iframe-container {

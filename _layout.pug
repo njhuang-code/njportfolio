@@ -61,6 +61,15 @@ html(lang="zh-Hant")
           li.menu-item: a.menu-link(href=`${prefix}#project`) 專案作品
           li.menu-item: a.menu-link(href=`${prefix}#soho`) 接案作品
     block content
+    block footer
+      footer.footer
+        .container
+          .footer-content
+            
+            a.footer-link(href="#")
+              span.material-icons-round mail_outline
+              |nj.huang2.0@gmail.com
+            .copy-right All Content © Copyright  2025
     block script
       script(src="./js/jquery-3.7.1.min.js")
       if hasAnimate

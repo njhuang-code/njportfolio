@@ -1,0 +1,32 @@
+extends _layout.pug
+
+block vars
+  - var isHome = false
+  - var alertText = true
+  - var websiteUrl = './setnNews/setn/index.html'
+  - var urlBlank = '_blank'
+
+block content
+  main.main-content
+    .section-case
+      .case-head
+        .container
+          .content
+            h1.case-heading 三立新聞網首頁改版提案
+            if alertText
+              span.case-alert 以下頁面僅供切版測試與展示用途，主要因正式網站資料遺失或尚未建置完成，故目前呈現的內容屬於非正式版本。
+            a.case-link(href=websiteUrl target=urlBlank) 切版測試頁面(新聞首頁)
+            a.case-link(href="./setnNews/setn/news.html" target=urlBlank) 切版測試頁面(新聞內頁)
+            a.case-link(href="./setnNews/setn/pages.html" target=urlBlank) 切版測試頁面(新聞分類頁)
+      .case-body 
+        .container
+          .case-column
+            .case-item
+              p.case-msg 新聞首頁
+              img(src="./images/setncase/setn01.jpg", alt="")
+            .case-item
+              p.case-msg 新聞內頁
+              img(src="./images/setncase/setn02.jpg", alt="")
+            .case-item
+              p.case-msg 新聞分類頁
+              img(src="./images/setncase/setn03.jpg", alt="")

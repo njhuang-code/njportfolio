@@ -1,33 +1,18 @@
+// ✅ Step 1: DOM 載入完再判斷要不要跑動畫
 document.addEventListener('DOMContentLoaded', function () {
-  const hasHash = window.location.hash && window.location.hash.length > 1;
-
-  if (hasHash) {
-    document.body.setAttribute('scroll-block', '');
-
-    setTimeout(() => {
-      const targetEl = document.querySelector(window.location.hash);
-      if (targetEl) {
-        window.scrollTo({
-          top: targetEl.getBoundingClientRect().top + window.scrollY,
-          left: 0,
-          behavior: 'auto'
-        });
-      }
-
-      // ✅ 解鎖畫面
-      document.body.removeAttribute('scroll-block');
-    }, 0);
-  } else {
+  // 如果網址沒有 hash，就跑進場動畫
+  if (!window.location.hash) {
     gsapAni();
   }
 });
 
-
+// ✅ Step 2: 修改 gsapAni 的 onStart，避免覆蓋使用者的錨點位置
 function gsapAni() {
   gsap
     .timeline({
       delay: 0.7,
       onStart: function () {
+        // 只有在沒有 hash 時才 scrollTo top
         if (!window.location.hash) {
           window.scrollTo(0, 0);
         }
@@ -35,74 +20,107 @@ function gsapAni() {
       onComplete: function () {
         gsap
           .timeline({ delay: 0.5, repeat: -1, repeatDelay: 2 })
-          .from(".sloganImg", {
-            scale: 0,
-            opacity: 0,
-            duration: 1.5,
-            ease: "elastic.out(1, 0.35)",
-            clearProps: "all",
-            stagger: 0.8,
-          }, "kvStart+=2.1")
-          .from(".kv-deco-box > .skill", {
-            scale: 0,
-            opacity: 0,
-            duration: 1.5,
-            ease: "elastic.out(1, 0.35)",
-            clearProps: "all",
-            stagger: {
-              each: 0.2,
-              from: "random",
+          .from(
+            ".sloganImg",
+            {
+              scale: 0,
+              opacity: 0,
+              duration: 1.5,
+              ease: "elastic.out(1, 0.35)",
+              clearProps: "all",
+              stagger: 0.8,
             },
-          }, "kvStart+=0.5");
+            "kvStart+=2.1"
+          )
+          .from(
+            ".kv-deco-box > .skill",
+            {
+              scale: 0,
+              opacity: 0,
+              duration: 1.5,
+              ease: "elastic.out(1, 0.35)",
+              clearProps: "all",
+              stagger: {
+                each: 0.2,
+                from: "random",
+              },
+            },
+            "kvStart+=0.5"
+          );
       },
     })
     .addLabel("kvStart")
-    .from(".kv-title", {
-      opacity: 0,
-      scale: 0,
-      ease: "elastic.out(1, 0.35)",
-      duration: 0.8,
-      clearProps: "all",
-    }, "kvStart+=0.5")
-    .from(".kv-sec-title", {
-      scale: 0,
-      opacity: 0,
-      duration: 1.85,
-      ease: "elastic.out(1, 0.35)",
-      clearProps: "all",
-    }, "kvStart+=1")
-    .from(".kv-desc", {
-      y: "-100%",
-      opacity: 0,
-      ease: "elastic.out(1, 0.35)",
-      duration: 1.25,
-      clearProps: "all",
-    }, "kvStart+=1.5")
-    .from(".kv-deco-box > .skill", {
-      scale: 0,
-      ease: "elastic.out(1, 0.35)",
-      duration: 1.5,
-      clearProps: "all",
-      stagger: {
-        each: 0.2,
-        from: "random",
+    .from(
+      ".kv-title",
+      {
+        opacity: 0,
+        scale: 0,
+        ease: "elastic.out(1, 0.35)",
+        duration: 0.8,
+        clearProps: "all",
       },
-    }, "kvStart+=0.5")
-    .from(".kv-visual", {
-      y: "-100%",
-      opacity: 0,
-      ease: "elastic.out(1, 0.35)",
-      duration: 1.5,
-      clearProps: "all"
-    }, "kvStart+=0.8")
-    .from(".kv-scroll", {
-      y: "-100%",
-      opacity: 0,
-      ease: "elastic.out(1, 0.35)",
-      duration: 1.5,
-      clearProps: "all"
-    }, "kvStart+=1.25");
+      "kvStart+=0.5"
+    )
+    .from(
+      ".kv-sec-title",
+      {
+        scale: 0,
+        opacity: 0,
+        duration: 1.85,
+        ease: "elastic.out(1, 0.35)",
+        clearProps: "all",
+      },
+      "kvStart+=1"
+    )
+    .from(
+      ".kv-desc",
+      {
+        y: "-100%",
+        opacity: 0,
+        ease: "elastic.out(1, 0.35)",
+        duration: 1.25,
+        clearProps: "all",
+      },
+      "kvStart+=1.5"
+    )
+    .from(
+      ".kv-deco-box > .skill",
+      {
+        scale: 0,
+        ease: "elastic.out(1, 0.35)",
+        duration: 1.5,
+        clearProps: "all",
+        stagger: {
+          each: 0.2,
+          from: "random",
+        },
+      },
+      "kvStart+=0.5"
+    )
+    .from(
+      ".kv-visual",
+      {
+        y: "-100%",
+        opacity: 0,
+        ease: "elastic.out(1, 0.35)",
+        duration: 1.5,
+        clearProps: "all",
+      },
+      "kvStart+=0.8"
+    )
+    .from(
+      ".kv-scroll",
+      {
+        y: "-100%",
+        opacity: 0,
+        ease: "elastic.out(1, 0.35)",
+        duration: 1.5,
+        clearProps: "all",
+      },
+      "kvStart+=1.25"
+    );
 }
+
 
 
 
