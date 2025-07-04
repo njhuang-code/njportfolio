@@ -2,9 +2,8 @@ doctype html
 html(lang="zh-Hant")
   block vars
     - var hasSwiper = true
-    - var hasGSAP = true
+    - var hasGsap = true
     - var hasAnimate = true
-    - var hasTyped = false
     - var header_title = ''
     - var author = ''
     - var og_title = ''
@@ -74,11 +73,9 @@ html(lang="zh-Hant")
       script(src="./js/jquery-3.7.1.min.js")
       if hasAnimate
         script(src="./js/animate.js") 
-      if hasGSAP
+      if hasGsap
         script(src="./js/gsap.min.js") 
         script(src="./js/ScrollTrigger.min.js") 
       if hasSwiper
         script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
-      if hasTyped
-        script(src="./js/typed.js")
       script(src="./js/main.js")
