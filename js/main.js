@@ -229,21 +229,44 @@ $(function () {
   });
 
   $(window).on('scroll', function () {
-    const scrollPos = $(window).scrollTop() + headerHeight + 1;
-
+    const scrollTop = $(window).scrollTop();
+    const scrollPos = scrollTop + headerHeight + 1;
+  
     let currentId = null;
-
-    sections.each(function () {
-      if ($(this).offset().top <= scrollPos) {
+  
+    // 從下往上檢查 sections
+    $([...sections].reverse()).each(function () {
+      const $section = $(this);
+      const sectionTop = $section.offset().top;
+      const sectionHeight = $section.outerHeight();
+  
+      if (scrollPos >= sectionTop) {
         currentId = this.id;
+        return false; // 找到符合的區塊就跳出
       }
     });
-
+  
+    navLinks.removeClass('is-active');
+  
     if (currentId) {
-      navLinks.removeClass('is-active');
       navLinks.filter(`[href="#${currentId}"]`).addClass('is-active');
     }
   });
 
-  $(window).trigger('scroll');
+  $(function () {
+    $("#gotop").click(function () {
+      jQuery("html,body").animate({
+        scrollTop: 0
+      }, 500);
+    });
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 0) {
+        $('#gotop').fadeIn("slow");
+      } else {
+        $('#gotop').stop().fadeOut("slow");
+      }
+    });
+  });
+  
 });
+

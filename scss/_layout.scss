@@ -97,6 +97,23 @@
   }
 }
 
+.gotop {
+  @include flex-center;
+  @include size(50px);
+  position: fixed;
+  z-index: 9;
+  right: px-rem(40);
+  bottom: px-rem(60);
+  border-radius: 100%;
+  background: $fourth;
+  
+  span {
+    color: $primary;
+    font-size: px-rem(32);
+  }
+
+}
+
 @media (max-width: ($mbrwd-breakpoint* 1px)) {
 
   .btn {

@@ -37,7 +37,7 @@ html(lang="zh-Hant")
         meta(name='keywords', content=meta_keyword)
       //- 標準網址
       link(rel='canonical', href=og_url)
-      link(rel="shortcut icon", href="", type="image/x-icon")
+      link(rel="shortcut icon", href="./images/icon.png", type="icon")
       //- google fonts
       link(rel="preconnect", href="https://fonts.googleapis.com")
       link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
@@ -68,6 +68,9 @@ html(lang="zh-Hant")
               span.material-icons-round mail_outline
               |nj.huang2.0@gmail.com
             .copy-right All Content © Copyright  2025
+    block gotop
+      a#gotop.gotop(href="javascript:;")
+        span.material-icons-round expand_less
     block script
       script(src="./js/jquery-3.7.1.min.js")
       if hasAnimate
