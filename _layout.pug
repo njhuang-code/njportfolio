@@ -51,14 +51,13 @@ html(lang="zh-Hant")
           overflow: hidden;
         }
   body
-    - var prefix = (typeof isHome !== 'undefined' && isHome) ? '' : 'index.html'
-    block nav
+    if  hasNav
       nav.menu
         ul.menu-row.container
-          li.menu-item: a.menu-link(href=`${prefix}#skill`) 關於NJ
-          li.menu-item: a.menu-link(href=`${prefix}#experience`) 工作經歷
-          li.menu-item: a.menu-link(href=`${prefix}#project`) 專案作品
-          li.menu-item: a.menu-link(href=`${prefix}#soho`) 接案作品
+          li.menu-item: a.menu-link(href="#skill") 關於NJ
+          li.menu-item: a.menu-link(href="#experience") 工作經歷
+          li.menu-item: a.menu-link(href="#project") 專案作品
+          li.menu-item: a.menu-link(href="#soho") 接案作品
     block content
     block footer
       footer.footer

@@ -1,52 +1,30 @@
-// ✅ Step 1: DOM 載入完再判斷要不要跑動畫
-document.addEventListener('DOMContentLoaded', function () {
-  // 如果網址沒有 hash，就跑進場動畫
-  if (!window.location.hash) {
-    gsapAni();
-  }
-});
-
-// ✅ Step 2: 修改 gsapAni 的 onStart，避免覆蓋使用者的錨點位置
 function gsapAni() {
   gsap
     .timeline({
       delay: 0.7,
-      onStart: function () {
-        // 只有在沒有 hash 時才 scrollTo top
-        if (!window.location.hash) {
-          window.scrollTo(0, 0);
-        }
-      },
       onComplete: function () {
         gsap
           .timeline({ delay: 0.5, repeat: -1, repeatDelay: 2 })
           .from(
-            ".sloganImg",
-            {
+            ".kv-deco-box > .skill",
+            { 
               scale: 0,
               opacity: 0,
               duration: 1.5,
               ease: "elastic.out(1, 0.35)",
               clearProps: "all",
               stagger: 0.8,
-            },
-            "kvStart+=2.1"
-          )
-          .from(
-            ".kv-deco-box > .skill",
-            {
-              scale: 0,
-              opacity: 0,
-              duration: 1.5,
-              ease: "elastic.out(1, 0.35)",
-              clearProps: "all",
               stagger: {
                 each: 0.2,
                 from: "random",
               },
+            
             },
             "kvStart+=0.5"
           );
+      },
+      onStart: function () {
+        window.scrollTo(0, 0);
       },
     })
     .addLabel("kvStart")
@@ -72,15 +50,13 @@ function gsapAni() {
       },
       "kvStart+=1"
     )
-    .from(
-      ".kv-desc",
-      {
-        y: "-100%",
-        opacity: 0,
-        ease: "elastic.out(1, 0.35)",
-        duration: 1.25,
-        clearProps: "all",
-      },
+    .from('.kv-desc ', {
+      y: '-100%',
+      opacity: 0,
+      ease: "elastic.out(1, 0.35)",
+      duration: 1.25,
+      clearProps: 'all',
+    },
       "kvStart+=1.5"
     )
     .from(
@@ -89,38 +65,39 @@ function gsapAni() {
         scale: 0,
         ease: "elastic.out(1, 0.35)",
         duration: 1.5,
+        stagger: 0.8,
         clearProps: "all",
         stagger: {
           each: 0.2,
           from: "random",
         },
+      
       },
       "kvStart+=0.5"
     )
     .from(
-      ".kv-visual",
+      '.kv-visual',
       {
-        y: "-100%",
-        opacity: 0,
-        ease: "elastic.out(1, 0.35)",
-        duration: 1.5,
-        clearProps: "all",
-      },
-      "kvStart+=0.8"
+      y: '-100%',
+      opacity: 0,
+      ease: "elastic.out(1, 0.35)",
+      duration: 1.5,
+      clearProps: 'all'
+    },
+    "kvStart+=0.8"
     )
     .from(
       ".kv-scroll",
       {
-        y: "-100%",
+        y: '-100%',
         opacity: 0,
         ease: "elastic.out(1, 0.35)",
         duration: 1.5,
-        clearProps: "all",
+        clearProps: 'all'
       },
       "kvStart+=1.25"
     );
 }
-
 
 
 
@@ -164,37 +141,33 @@ document.querySelectorAll('.project-slide').forEach((el, index) => {
 });
 
 
+
+
 $('.tab-item').on('click', function () {
-  // tab 樣式切換
   $('.tab-item').removeClass('is-active');
   $(this).addClass('is-active');
 
-  // 取得要顯示的目標 ID
   const target = $(this).data('target');
 
-  // 顯示對應 swiper 區塊，隱藏其他
   $('.project-row.swiper.project-slide').hide();
   $(target).show();
 });
 
 $(document).ready(function () {
-  // 點擊每個 .expand-icon 時
   $('.expand-icon').on('click', function () {
-    const $item = $(this).closest('.experience-item'); // 對應這一項
+    const $item = $(this).closest('.experience-item'); 
     const $jobRow = $item.find('.experience-job-row');
 
-    // 切換展開狀態
     $item.toggleClass('is-open');
     $jobRow.slideToggle(200);
 
-    // 切換箭頭方向（可選）
     $(this).text($item.hasClass('is-open') ? 'expand_less' : 'expand_more');
   });
 });
 
 
 $(function () {
-  // scrollAnim
+
   var pageTop;
   var pageBottom;
   var activeOffset = 30;
@@ -211,7 +184,7 @@ $(function () {
       }
     });
   }
-  scrollAnim(); // init
+  scrollAnim(); 
   $(document).on("scroll", scrollAnim);
 
   gsapAni();
@@ -222,13 +195,11 @@ $(function () {
   const headerHeight = 60;
   const navLinks = $('nav.menu ul.menu-row.container a.menu-link[href^="#"]');
 
-  // 收集對應區塊（nav 連結目標）
   const sections = navLinks.map(function () {
     const targetId = $(this).attr('href');
     return $(targetId).length ? $(targetId)[0] : null;
   });
 
-  // nav 點擊平滑滾動 + 加 active
   navLinks.on('click', function (e) {
     const targetId = $(this).attr('href');
 
@@ -247,7 +218,7 @@ $(function () {
     }
   });
 
-  // kv-scroll 按鈕點擊，只平滑滾動，不動 .is-active
+
   $('.kv-scroll').on('click', function (e) {
     e.preventDefault();
     const target = $('#skill');
@@ -257,7 +228,6 @@ $(function () {
     }
   });
 
-  // 滾動監聽，動態切換 nav active（不包含 kv-scroll）
   $(window).on('scroll', function () {
     const scrollPos = $(window).scrollTop() + headerHeight + 1;
 
@@ -275,9 +245,5 @@ $(function () {
     }
   });
 
-  // 頁面載入先觸發一次滾動事件，確保狀態正確
   $(window).trigger('scroll');
 });
-
-
-
