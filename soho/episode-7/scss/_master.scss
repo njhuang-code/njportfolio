@@ -1,0 +1,337 @@
+// kv visual
+// --------------------------------------------------
+.kv-section {
+  &__sub-title {
+    @include size(auto, pct(115px));
+    animation: flameWind 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+    transition-delay: 100ms;
+  }
+
+  &__visual {
+    @include size(626px, 132px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    &::before {
+      @include size(100%, 583px);
+      @include background-cover;
+      content: "";
+      background-image: url(../images/kv_spark.png);
+      position: absolute;
+      margin-top: -20%;
+      left: 4%;
+      pointer-events: none;
+    }
+    &::after {
+      @include size(100%, 583px);
+      @include background-cover;
+      content: "";
+      background-image: url(../images/kv_smoke3.png);
+      margin-top: -18%;
+      pointer-events: none;
+    }
+  }
+
+  &__smoke {
+    @include center;
+    @include size(626px, 100%);
+    &::before,
+    &::after {
+      z-index: 3;
+      filter: url(#smokeFlow) blur(1px);
+    }
+    &::before {
+      @include size(100%, 100%);
+      @include background-contain;
+      content: "";
+      position: absolute;
+      top: -26%;
+      left: -26%;
+      background-image: url(../images/kv_smoke1.png);
+    }
+    &::after {
+      @include size(123%, 100%);
+      content: "";
+      position: absolute;
+      top: -20%;
+      right: calc(50% + #{-(500)}px);;
+      background-image: url(../images/kv_smoke2.png);
+      background-size: 100% 100%;
+      background-position: center 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    @include size(auto, 100px);
+    position: absolute;
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+      animation: flameWindDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 100ms;
+    }
+    &:nth-child(2) {
+      top: -8px;
+      left: 100px;
+      animation: flameWindUp 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 200ms;
+    }
+    &:nth-child(3) {
+      top: 30px;
+      left: 190px;
+      animation: flameWindDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 300ms;
+    }
+    &:nth-child(4) {
+      top: 0;
+      left: 285px;
+      animation: flameWindUp 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 400ms;
+    }
+    &:nth-child(5) {
+      @include size(auto, 70px);
+      top: 38px;
+      left: 385px;
+      animation: flameWindDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 500ms;
+    }
+    &:nth-child(6) {
+      top: -9px;
+      left: 446px;
+      animation: flameWindUp 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 600ms;
+    }
+    &:nth-child(7) {
+      top: 5px;
+      left: 524px;
+      animation: flameWindDown 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+      transition-delay: 700ms;
+    }
+  }
+
+  &__date {
+    background: url(../images/kv_date.png);
+    @include size(578px, 81px);
+    @include background-contain;
+    font-size: 0.0000000000001em;
+    margin: 16px auto 32px;
+    animation: fadeUp 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+    transition-delay: 900ms;
+  }
+
+  &__scroll {
+    flex-shrink: 0;
+    @include background-contain;
+    @include size(37px, 108px);
+    background-image: url(../images/kv_scrolldown.png);
+    animation: fadeUp2 2.2s forwards, float 1.3s infinite;
+    transition-delay: 1000ms;
+  }
+
+  &__btn {
+    @include size(120px);
+    @include background-cover;
+    background-image: url(../images/btn_play.png);
+    position: relative;
+    background-position: 50% 0;
+    animation: flameWind 1.5s cubic-bezier(0.65, 0, 0.35, 1) 1 forwards;
+    
+    @include hover-only {
+      &:hover {
+        background-position: 50% 100%;
+      }
+    }
+  }
+
+}
+
+// s2 section
+// --------------------------------------------------
+.s2-section {
+  &__bg {
+    @include flex-center;
+    @include size(100%, 100%);
+    background: url(../images/s2_bg.jpg);
+    @include background-cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    &::after {
+      content: none;
+    }
+  }
+
+  &__imgbox {
+    @include size(1080px, 750px);
+    position: relative;
+    * {
+      position: absolute;
+    }
+  }
+
+  &__img01 {
+    @include size(427px, 395px);
+    background: url(../images/s2_equip_01.png);
+    @include background-cover;
+    top: pct(-100px);
+    left: calc(50% + #{-(580)}px);
+  }
+
+  &__img02 {
+    @include size(400px, 350px);
+    background: url(../images/s2_equip_02.png);
+    @include background-contain;
+    bottom: pct(200px);
+    right: calc(50% + #{-(480)}px);
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+}
+
+// s3 section
+// --------------------------------------------------
+.s3-section {
+  &__bg {
+    background: url(../images/s3_bg.jpg);
+    @include background-cover;
+  }
+  &__row {
+    @include size(1265px, 672px);
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: -48px;
+  }
+  &__item {
+    @include size(537px, 672px);
+    flex-shrink: 0;
+    position: absolute;
+    &:nth-child(1) {
+      background: url(../images/s3_card_01.png);
+      @include background-cover;
+      left: 0;
+      .vodbox {
+        left: calc((100% - 269px)/2);
+      }
+    }
+    &:nth-child(2) {
+      @include size(381px, 608px);
+      background: url(../images/s3_card_02.png);
+      @include background-cover;
+      .vodbox {
+        left: calc((100% - 305px)/2);
+        bottom: pct(153px);
+      }
+    }
+    &:nth-child(3) {
+      background: url(../images/s3_card_03.png);
+      @include background-cover;
+      right: 0;
+      .vodbox {
+        right: calc((100% - 269px)/2);
+      }
+    }
+  }
+
+  &__video {
+    @include size(100%);
+    object-fit: cover;
+  }
+
+  &__btn {
+    @include flex-center;
+    background: url(../images/s3_btn_default.png);
+    @include background-cover;
+    margin: auto;
+
+    @include hover-only {
+      &:hover {
+        background: url(../images/s3_btn_active.png);
+        @include background-cover;
+      }
+    }
+  }
+
+  .container {
+    max-width: inherit;
+  }
+
+
+  .section__btn {
+    margin-top: 24px;
+  }
+
+  .section__title {
+    margin-top: auto;
+  }
+
+  .vodbox {
+    @include size (296px, 171px);
+    position: absolute;
+    bottom: pct(138px);
+  }
+
+}
+
+// s4 section
+// --------------------------------------------------
+.s4-section {
+    &__bg {
+    background: url(../images/s4_bg.jpg);
+    @include background-cover;
+    background-position: initial;
+    &::after {
+      content: none;
+    }
+  }
+  &__row {
+    @extend .s3-section__row;
+    @include size(1070px, 672px);
+    margin-top: -76px;
+  }
+
+  &__item {
+    @include size(370px, 576px);
+    flex-shrink: 0;
+    position: absolute;
+    &:nth-child(1) {
+      background: url(../images/s4_card_01.png);
+      @include background-cover;
+      left: 0;
+    }
+    &:nth-child(2) {
+      background: url(../images/s4_card_02.png);
+      @include background-cover;
+    }
+    &:nth-child(3) {
+      background: url(../images/s4_card_03.png);
+      @include background-cover;
+      right: 0;
+    }
+  }
+  &__btn {
+    @extend .s3-section__btn;
+    background: url(../images/s4_btn_default.png);
+    @include background-cover;
+
+    @include hover-only {
+      &:hover {
+        background: url(../images/s4_btn_active.png);
+        @include background-cover;
+      }
+    }
+  }
+
+  .section__title {
+    margin-top: pct(-100px);
+  }
+}
