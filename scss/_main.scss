@@ -18,6 +18,7 @@
   .menu-logo {
     @include flex-center;
     .logo {
+      flex-shrink: 0;
       @include size(px-rem(49), px-rem(28));
     }
   }

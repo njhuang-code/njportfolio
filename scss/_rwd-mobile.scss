@@ -1,4 +1,29 @@
 @media (max-width: ($mbrwd-breakpoint* 1px)) {
+
+  // menu style
+  .menu {
+    border: vwm(1px) solid $primary-border;
+    .menu-logo {
+      @include flex-center;
+      .logo {
+        @include size(vwm(49px * 1.25), vwm(28px * 1.25));
+      }
+    }
+    .menu-row {
+      gap: vwm(32px);
+      height: vwm(60px);
+      .menu-link {
+        font-size: vwm(24px * 1.25);
+      }
+    }
+  }
+  .section-news-ticker {
+    border: 1px solid $primary-border;
+    .news-ticker {
+      font-size: vwm(72px);
+    }
+  }
+
   // kv style
   .kv-section {
     min-height: auto;
@@ -98,8 +123,28 @@
     }
   }
 
+    // skill style
+    .section-skill-row  {
+      gap: vwm(36px);
+      .section-skill-item {
+        font-size: vwm(40px * 1.25);
+      }
+      .skill-text {
+        font-size: vwm(16px);
+      }
+      .btn {
+        @include size(vwm(160px * 1.5), vwm(48px * 1.5));
+        border-radius: vwm(99px);
+        font-size: vwm(36px);
+        &-primary {
+          border: vwm(2px * 2) solid $primary;
+        }
+      }
+    }
+
   // experience style
   .section-experience {
+    padding-bottom: vwm(120px);
     .experience-item {
       padding-left: vwm(24px);
       padding-bottom: vwm(16px);
@@ -144,8 +189,13 @@
     }
   }
 
+  .section-project {
+    padding-bottom: vwm(120px);
+  }
+
   // soho style
   .section-soho {
+    padding-top: vwm(150px);
     .soho-grid {
       @include flex-column;
       gap: vwm(24px);

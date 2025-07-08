@@ -273,6 +273,7 @@ button {
   }
   .section {
     margin: 13.0208333333vw 0;
+    padding: 9.375vw 0;
   }
   .section-title {
     font-size: 4.6875vw;
@@ -322,6 +323,8 @@ button {
           align-items: center;
 }
 .menu .menu-logo .logo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 3.0625rem;
   height: 1.75rem;
 }
@@ -1189,6 +1192,37 @@ button {
 }
 
 @media (max-width: 1200px) {
+  .menu {
+    border: 0.0833333333vw solid #C8C8C8;
+  }
+  .menu .menu-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu .menu-logo .logo {
+    width: 4.0833333333vw;
+    height: 2.3333333333vw;
+  }
+  .menu .menu-row {
+    gap: 2.6666666667vw;
+    height: 5vw;
+  }
+  .menu .menu-row .menu-link {
+    font-size: 2vw;
+  }
+  .section-news-ticker {
+    border: 1px solid #C8C8C8;
+  }
+  .section-news-ticker .news-ticker {
+    font-size: 6vw;
+  }
   .section-about .about-content {
     gap: 2vw;
     height: auto;
@@ -1221,6 +1255,24 @@ button {
     padding: 0.6666666667vw 1.3333333333vw;
     border-radius: 2vw;
   }
+  .section-skill-row {
+    gap: 3vw;
+  }
+  .section-skill-row .section-skill-item {
+    font-size: 3.3333333333vw;
+  }
+  .section-skill-row .skill-text {
+    font-size: 1.3333333333vw;
+  }
+  .section-skill-row .btn {
+    width: 16.6666666667vw;
+    height: 5vw;
+    border-radius: 8.25vw;
+    font-size: 2.6666666667vw;
+  }
+  .section-skill-row .btn-primary {
+    border: 0.1666666667vw solid #2B62E1;
+  }
   .section-soho .soho-grid {
     -ms-grid-rows: 16.6666666667vw 1.3333333333vw 16.6666666667vw 1.3333333333vw 16.6666666667vw;
     grid-template-rows: repeat(3, 16.6666666667vw);
@@ -1232,6 +1284,37 @@ button {
   }
 }
 @media (max-width: 768px) {
+  .menu {
+    border: 0.1302083333vw solid #C8C8C8;
+  }
+  .menu .menu-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu .menu-logo .logo {
+    width: 7.9752604167vw;
+    height: 4.5572916667vw;
+  }
+  .menu .menu-row {
+    gap: 4.1666666667vw;
+    height: 7.8125vw;
+  }
+  .menu .menu-row .menu-link {
+    font-size: 3.90625vw;
+  }
+  .section-news-ticker {
+    border: 1px solid #C8C8C8;
+  }
+  .section-news-ticker .news-ticker {
+    font-size: 9.375vw;
+  }
   .kv-section {
     min-height: auto;
   }
@@ -1336,6 +1419,27 @@ button {
     border-radius: 3.125vw;
     font-size: 3.90625vw;
   }
+  .section-skill-row {
+    gap: 4.6875vw;
+  }
+  .section-skill-row .section-skill-item {
+    font-size: 6.5104166667vw;
+  }
+  .section-skill-row .skill-text {
+    font-size: 2.0833333333vw;
+  }
+  .section-skill-row .btn {
+    width: 31.25vw;
+    height: 9.375vw;
+    border-radius: 12.890625vw;
+    font-size: 4.6875vw;
+  }
+  .section-skill-row .btn-primary {
+    border: 0.5208333333vw solid #2B62E1;
+  }
+  .section-experience {
+    padding-bottom: 15.625vw;
+  }
   .section-experience .experience-item {
     padding-left: 3.125vw;
     padding-bottom: 2.0833333333vw;
@@ -1378,6 +1482,12 @@ button {
   }
   .section-experience .experience-job-row .experience-job-item {
     font-size: 3.6458333333vw;
+  }
+  .section-project {
+    padding-bottom: 15.625vw;
+  }
+  .section-soho {
+    padding-top: 19.53125vw;
   }
   .section-soho .soho-grid {
     display: -webkit-box;

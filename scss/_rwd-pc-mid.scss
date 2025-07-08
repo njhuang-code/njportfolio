@@ -1,4 +1,29 @@
 @media (max-width: ($pc-midrwd-breakpoint* 1px)) {
+
+  // menu style
+  .menu {
+    border: vw(1px) solid $primary-border;
+    .menu-logo {
+      @include flex-center;
+      .logo {
+        @include size(vw(49px), vw(28px));
+      }
+    }
+    .menu-row {
+      gap: vw(32px);
+      height: vw(60px);
+      .menu-link {
+        font-size: vw(24px);
+      }
+    }
+  }
+  .section-news-ticker {
+    border: 1px solid $primary-border;
+    .news-ticker {
+      font-size: vw(72px);
+    }
+  }
+
   // about style
   .section-about {
     .about-content {
@@ -30,6 +55,25 @@
             border-radius: vw(24px);
           }
         }
+      }
+    }
+  }
+
+  // skill style
+  .section-skill-row  {
+    gap: vw(36px);
+    .section-skill-item {
+      font-size: vw(40px);
+    }
+    .skill-text {
+      font-size: vw(16px);
+    }
+    .btn {
+      @include size(vw(160px * 1.25), vw(48px * 1.25));
+      border-radius: vw(99px);
+      font-size: vw(32px);
+      &-primary {
+        border: vw(2px) solid $primary;
       }
     }
   }

@@ -6,11 +6,11 @@ html(lang="zh-Hant")
     - var hasAnimate = true
     - var header_title = ''
     - var author = ''
-    - var og_title = ''
+    - var og_title = 'NJ Huang 網頁設計作品集｜NJ Huang\'s Portfolio'
     - var og_image = './images/facebook_1200x630.jpg'
-    - var og_url = ''
-    - var og_desc = ''
-    - var meta_keyword = ''
+    - var og_url = 'https://njhuang-code.github.io/njportfolio/'
+    - var og_desc = '前端開發,網頁設計師,網頁設計,前端網頁,前端設計,行銷活動網頁,新聞網頁,切版,UI,UX,Design,website| NJ Portfolio'
+    - var meta_keyword = '前端開發,網頁設計師,網頁設計,前端網頁,前端設計,行銷活動網頁,新聞網頁,切版,UI,UX,Design,website| NJ Portfolio'
     - var date_publish = '2025-06-22'
   head
     block head
@@ -46,11 +46,23 @@ html(lang="zh-Hant")
       if hasSwiper
         link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
       link(rel="stylesheet", href="./css/style.css")
+
       style.
         body[scroll-block] {
           overflow: hidden;
         }
+
+      // Google tag (gtag.js)
+      script(async src="https://www.googletagmanager.com/gtag/js?id=G-ZN3P16FNYP")
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZN3P16FNYP');
+
+
   body
+
     if  hasNav
       nav.menu
         .container
