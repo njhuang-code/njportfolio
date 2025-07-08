@@ -166,6 +166,13 @@
 
     }
     .experience-content {
+
+      .experience-right {
+        gap: vwm(16px);
+        .material-icons-round {
+          font-size: vwm(36px);
+        }
+      }
       .experience-title {
         font-size: vwm(36px);
       }

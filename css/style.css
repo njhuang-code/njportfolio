@@ -1458,6 +1458,12 @@ button {
     border-radius: 2.0833333333vw;
     padding: 1.0416666667vw 1.5625vw;
   }
+  .section-experience .experience-content .experience-right {
+    gap: 2.0833333333vw;
+  }
+  .section-experience .experience-content .experience-right .material-icons-round {
+    font-size: 4.6875vw;
+  }
   .section-experience .experience-content .experience-title {
     font-size: 4.6875vw;
   }
