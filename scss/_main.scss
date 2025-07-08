@@ -12,6 +12,15 @@
   z-index: 2;
   border: 1px solid $primary-border;
   background: $b1;
+  .menu-content {
+    display: flex
+  }
+  .menu-logo {
+    @include flex-center;
+    .logo {
+      @include size(px-rem(49), px-rem(28));
+    }
+  }
   .menu-row {
     @include d-flex;
     @include flex-wrap;

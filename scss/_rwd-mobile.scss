@@ -151,4 +151,51 @@
       gap: vwm(24px);
     }
   }
+
+  // case style
+
+  .section-case {
+    gap: vwm(40px);
+    padding-bottom: vwm(60px);
+    .content {
+      gap: vwm(8px);
+    }
+  }
+
+  .case-head {
+    padding-top: vwm(48px);
+    .case-heading {
+      font-size: vwm(60px);
+    }
+    .case-link {
+      font-size: vwm(32px);
+    }
+    .case-alert {
+      font-size: vwm(32px);
+    }
+  }
+
+  .case-body {
+    .case-column {
+      gap: vwm(36px);
+      margin-top: vwm(36px);
+    }
+    .case-row {
+      flex-wrap: wrap;
+      gap: vwm(16px)
+    }
+    .case-item {
+      margin-top: vwm(16px);
+      flex: none;
+      width: 100%;
+    }
+    .case-msg {
+      font-size: vwm(36px);
+      margin-bottom: vwm(16px);
+    }
+    .case-text {
+      font-size: vwm(20px);
+      margin-bottom: vwm(12px);
+    }
+  }
 }

@@ -193,7 +193,7 @@ $(function () {
 
 $(function () {
   const headerHeight = 60;
-  const navLinks = $('nav.menu ul.menu-row.container a.menu-link[href^="#"]');
+  const navLinks = $('a.menu-link[href^="#"]');
 
   const sections = navLinks.map(function () {
     const targetId = $(this).attr('href');
