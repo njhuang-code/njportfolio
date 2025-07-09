@@ -635,6 +635,10 @@ button {
 .section-experience .experience-item:not(:first-child) {
   margin-top: -0.75rem;
 }
+.section-experience .experience-item.is-open .toggle-trigger.rotate {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
 .section-experience .experience-item.is-open .experience-job-row {
   display: block;
 }
@@ -689,20 +693,19 @@ button {
           flex: 0 0 auto;
   gap: 1rem;
 }
-.section-experience .experience-content .experience-right .material-icons-round {
-  font-size: 36px;
-  color: #7EAAF6;
-  cursor: pointer;
+.section-experience .experience-content .experience-right .toggle {
+  width: 36px;
+  height: 36px;
+  background: url(../images/icon-arrow-down.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.section-experience .experience-content .experience-right .material-icons-round.expand-icon {
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-.section-experience .experience-content .experience-right .material-icons-round.expand-icon.rotate {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+.section-experience .experience-content .experience-right .toggle.rotate {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 .section-experience .experience-content .experience-title {
   color: #2B62E1;

@@ -246,6 +246,11 @@
       margin-top: px-rem(-12);
     }
     &.is-open {
+      .toggle-trigger {
+        &.rotate {
+          transform: rotate(-180deg);
+        }
+      }
       .experience-job-row {
         display: block
       }
@@ -276,18 +281,17 @@
       @include flex-center;
       flex: 0 0 auto;
       gap: px-rem(16);
-      
-      .material-icons-round {
-        font-size: 36px;
-        color: $third-text;
-        cursor: pointer;
-        &.expand-icon {
-          transition: transform 0.3s ease-in-out;
-          &.rotate {
-            transform: rotate(-90deg);
-          }
+
+      .toggle {
+        @include size(36px);
+        background: url(../images/icon-arrow-down.svg);
+        @include background-cover;
+        transition: all .3s ease;
+        &.rotate {
+          transform: rotate(-180deg);
         }
       }
+      
     }
     .experience-title {
       color: $primary-text;

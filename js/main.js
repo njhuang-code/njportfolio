@@ -133,14 +133,14 @@ $('.tab-item').on('click', function () {
 });
 
 $(document).ready(function () {
-  $('.expand-icon').on('click', function () {
+  $('.toggle-trigger').on('click', function () {
     const $item = $(this).closest('.experience-item'); 
     const $jobRow = $item.find('.experience-job-row');
 
     $item.toggleClass('is-open');
     $jobRow.slideToggle(200);
 
-    $(this).text($item.hasClass('is-open') ? 'expand_less' : 'expand_more');
+    $(this).toggleClass('rotate');
   });
 });
 
