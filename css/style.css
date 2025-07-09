@@ -295,13 +295,13 @@ button {
     min-height: 3.90625vw;
   }
   .gotop {
-    width: 6.5104166667vw;
-    height: 6.5104166667vw;
-    right: 5.2083333333vw;
+    width: 8.1380208333vw;
+    height: 8.1380208333vw;
+    right: 2.6041666667vw;
     bottom: 7.8125vw;
   }
   .gotop span {
-    font-size: 4.1666666667vw;
+    font-size: 5.2083333333vw;
   }
 }
 .main-content {

@@ -158,11 +158,11 @@
   }
 
   .gotop {
-    @include size(vwm(50px));
-    right: vwm(40px);
+    @include size(vwm(50px * 1.25));
+    right: vwm(20px);
     bottom: vwm(60px);
     span {
-      font-size: vwm(32px);
+      font-size: vwm(32px * 1.25);
     }
   
   }
