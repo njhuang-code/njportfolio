@@ -5,23 +5,6 @@ function gsapAni() {
       onComplete: function () {
         gsap
           .timeline({ delay: 0.5, repeat: -1, repeatDelay: 2 })
-          .from(
-            ".kv-deco-box > .skill",
-            { 
-              scale: 0,
-              opacity: 0,
-              duration: 1.5,
-              ease: "elastic.out(1, 0.35)",
-              clearProps: "all",
-              stagger: 0.8,
-              stagger: {
-                each: 0.2,
-                from: "random",
-              },
-            
-            },
-            "kvStart+=0.5"
-          );
       },
       onStart: function () {
         window.scrollTo(0, 0);
@@ -105,16 +88,16 @@ document.querySelectorAll('.project-slide').forEach((el, index) => {
   const swiper = new Swiper(el, {
     slidesPerView: 1.25,
     spaceBetween: 16,
-    navigation: {
-      nextEl: el.querySelector('.swiper-button-next'),
-      prevEl: el.querySelector('.swiper-button-prev'),
-    },
     breakpoints: {
       768: {
         slidesPerView: 2.25,
       },
       1200: {
         slidesPerView: 3.25,
+        navigation: {
+          nextEl: el.querySelector('.swiper-button-next'),
+          prevEl: el.querySelector('.swiper-button-prev'),
+        },
       },
     },
 
