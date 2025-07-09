@@ -244,8 +244,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   position: fixed;
   z-index: 9;
   right: 2.5rem;
@@ -290,6 +290,15 @@ button {
   .tab-row .tab-item:nth-child(2) {
     width: 0.5208333333vw;
     min-height: 3.90625vw;
+  }
+  .gotop {
+    width: 6.5104166667vw;
+    height: 6.5104166667vw;
+    right: 5.2083333333vw;
+    bottom: 7.8125vw;
+  }
+  .gotop span {
+    font-size: 4.1666666667vw;
   }
 }
 .main-content {
@@ -1212,7 +1221,7 @@ button {
   }
   .menu .menu-row {
     gap: 2.6666666667vw;
-    height: 5vw;
+    height: 6.25vw;
   }
   .menu .menu-row .menu-link {
     font-size: 2vw;

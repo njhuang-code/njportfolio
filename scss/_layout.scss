@@ -99,7 +99,7 @@
 
 .gotop {
   @include flex-center;
-  @include size(50px);
+  @include size(px-rem(50));
   position: fixed;
   z-index: 9;
   right: px-rem(40);
@@ -151,5 +151,15 @@
         min-height: vwm(15px * 2);
       }
     }
+  }
+
+  .gotop {
+    @include size(vwm(50px));
+    right: vwm(40px);
+    bottom: vwm(60px);
+    span {
+      font-size: vwm(32px);
+    }
+  
   }
 }

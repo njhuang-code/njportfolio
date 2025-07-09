@@ -1,20 +1,25 @@
 extends _layout.pug
 
 append vars
-  - var hasSkipAnimate = true
-  - var hasNav = true
+  - var hasNav = false
 block content
   main
     .main-content
       section.section.kv-section
         .container
           .kv-title-box
-            h1.kv-title Hi, I’M 
-              span.kv-title-point NJ
-            p.kv-sec-title UI & WEB DESIGNER
-            p.kv-desc 擁有超過 5 年的網頁 UI 設計與前端開發經驗，
+            h1.kv-title Lorem ipsum
+                span.kv-title-point Lorem ipsum
+            //- h1.kv-title Hi, I’M 
+            //-   span.kv-title-point NJ
+            //- p.kv-sec-title UI & WEB DESIGNER
+            p.kv-sec-title OO OOOOOOOOO
+            p.kv-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               br
-              |並利用下班及假日時段接案與進修，不斷累積實務經驗與專案管理能力。
+              |Lorem ipsum dolor sit amet
+            //- p.kv-desc 擁有超過 5 年的網頁 UI 設計與前端開發經驗，
+            //-   br
+            //-   |並利用下班及假日時段接案與進修，不斷累積實務經驗與專案管理能力。
           .kv-deco-box
             img.skill.skill01(src="./images/img-vue.svg", alt="Vue")
             img.skill.skill02(src="./images/img-sass.svg", alt="Sass")

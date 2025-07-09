@@ -1,86 +1,80 @@
 function gsapAni() {
-  gsap
-    .timeline({
-      delay: 0.7,
-      onComplete: function () {
-        gsap
-          .timeline({ delay: 0.5, repeat: -1, repeatDelay: 2 })
-      },
-      onStart: function () {
-        window.scrollTo(0, 0);
-      },
-    })
-    .addLabel("kvStart")
-    .from(
-      ".kv-title",
-      {
-        opacity: 0,
-        scale: 0,
-        ease: "elastic.out(1, 0.35)",
-        duration: 0.8,
-        clearProps: "all",
-      },
-      "kvStart+=0.5"
-    )
-    .from(
-      ".kv-sec-title",
-      {
-        scale: 0,
-        opacity: 0,
-        duration: 1.85,
-        ease: "elastic.out(1, 0.35)",
-        clearProps: "all",
-      },
-      "kvStart+=1"
-    )
-    .from('.kv-desc ', {
-      y: '-100%',
-      opacity: 0,
-      ease: "elastic.out(1, 0.35)",
-      duration: 1.25,
-      clearProps: 'all',
+
+  gsap.timeline({
+    // delay: 0.7,
+    onComplete: function () {
+      gsap.timeline({ delay: 0.5, repeat: -1, repeatDelay: 2 });
     },
-      "kvStart+=1.5"
-    )
-    .from(
-      ".kv-deco-box > .skill",
-      {
-        scale: 0,
-        ease: "elastic.out(1, 0.35)",
-        duration: 1.5,
-        stagger: 0.8,
-        clearProps: "all",
-        stagger: {
-          each: 0.2,
-          from: "random",
-        },
-      
-      },
-      "kvStart+=0.5"
-    )
-    .from(
-      '.kv-visual',
-      {
-      y: '-100%',
-      opacity: 0,
-      ease: "elastic.out(1, 0.35)",
-      duration: 1.5,
-      clearProps: 'all'
+    onStart: function () {
+      window.scrollTo(0, 0);
     },
-    "kvStart+=0.8"
-    )
-    .from(
-      ".kv-scroll",
-      {
-        y: '-100%',
-        opacity: 0,
-        ease: "elastic.out(1, 0.35)",
-        duration: 1.5,
-        clearProps: 'all'
-      },
-      "kvStart+=1.25"
-    );
+  })
+  .addLabel("kvStart")
+  .from(".kv-title", {
+    ease: "elastic.out(1, 0.35)",
+    duration: 0.8,
+    clearProps: "all",
+  }, "kvStart+=0.5")
+  .from(".kv-sec-title", {
+    duration: 1.85,
+    ease: "elastic.out(1, 0.35)",
+    clearProps: "all",
+  }, "kvStart+=1")
+  .from(".kv-desc", {
+    y: '-100%',
+    ease: "elastic.out(1, 0.35)",
+    duration: 1.25,
+    clearProps: 'all',
+  }, "kvStart+=1.5")
+  .from(".kv-deco-box > .skill", {
+    ease: "elastic.out(1, 0.35)",
+    duration: 1.5,
+    clearProps: "all",
+    stagger: {
+      each: 0.2,
+      from: "random",
+    }
+  }, "kvStart+=0.5")
+  .from(".kv-visual", {
+    y: '-100%',
+    ease: "elastic.out(1, 0.35)",
+    duration: 1.5,
+    clearProps: 'all',
+  }, "kvStart+=0.8")
+  .from(".kv-scroll", {
+    y: '-100%',
+    autoAlpha: 0,
+    ease: "elastic.out(1, 0.35)",
+    duration: 1.5,
+    clearProps: 'all',
+    immediateRender: false
+  }, "kvStart+=1.25");
 }
+
+
+$(function () {
+
+  var pageTop;
+  var pageBottom;
+  var activeOffset = 30;
+  function scrollAnim() {
+    pageTop = $(document).scrollTop();
+    pageBottom = pageTop + $(window).height();
+    var tags = $(".animate");
+
+    tags.each(function (index) {
+      if ($(this).offset().top < pageBottom - activeOffset) {
+        $(this).addClass("animate_active");
+      } else {
+        $(this).removeClass("animate_active");
+      }
+    });
+  }
+  scrollAnim(); 
+  $(document).on("scroll", scrollAnim);
+
+  gsapAni();
+});
 
 
 
@@ -88,16 +82,19 @@ document.querySelectorAll('.project-slide').forEach((el, index) => {
   const swiper = new Swiper(el, {
     slidesPerView: 1.25,
     spaceBetween: 16,
+    navigation: {
+      enabled: false,
+    },
     breakpoints: {
       768: {
         slidesPerView: 2.25,
-      },
-      1200: {
-        slidesPerView: 3.25,
         navigation: {
           nextEl: el.querySelector('.swiper-button-next'),
           prevEl: el.querySelector('.swiper-button-prev'),
         },
+      },
+      1200: {
+        slidesPerView: 3.25,
       },
     },
 
@@ -125,7 +122,6 @@ document.querySelectorAll('.project-slide').forEach((el, index) => {
 
 
 
-
 $('.tab-item').on('click', function () {
   $('.tab-item').removeClass('is-active');
   $(this).addClass('is-active');
@@ -149,29 +145,7 @@ $(document).ready(function () {
 });
 
 
-$(function () {
 
-  var pageTop;
-  var pageBottom;
-  var activeOffset = 30;
-  function scrollAnim() {
-    pageTop = $(document).scrollTop();
-    pageBottom = pageTop + $(window).height();
-    var tags = $(".js-animate");
-
-    tags.each(function (index) {
-      if ($(this).offset().top < pageBottom - activeOffset) {
-        $(this).addClass("js-animate--active");
-      } else {
-        $(this).removeClass("js-animate--active");
-      }
-    });
-  }
-  scrollAnim(); 
-  $(document).on("scroll", scrollAnim);
-
-  gsapAni();
-});
 
 
 $(function () {
