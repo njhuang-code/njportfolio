@@ -6,11 +6,6 @@
 
 // menu style
 .menu {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  border: 1px solid $primary-border;
   background: $b1;
   .menu-content {
     display: flex
@@ -287,6 +282,7 @@
         background: url(../images/icon-arrow-down.svg);
         @include background-cover;
         transition: all .3s ease;
+        cursor: pointer;
         &.rotate {
           transform: rotate(-180deg);
         }
@@ -422,6 +418,10 @@
     left: 0;
   }
 
+  .project-img {
+    border-radius: px-rem(12);
+  }
+
   
   .project-name {
     @include center;
@@ -437,7 +437,6 @@
 
 // soho style
 .section-soho {
-  padding-top: px-rem(150);
   .soho-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -450,7 +449,6 @@
     font-size: px-rem(20);
     font-weight: 700;
     border-radius: px-rem(16);
-    background-color: #222;
     color: #fff;
     overflow: hidden;
     &:nth-child(1) {

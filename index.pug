@@ -1,7 +1,8 @@
 extends _layout.pug
 
 append vars
-  - var hasNav = false
+  - var isHome = true
+  - var hasNav = true
 block content
   main
     .main-content
@@ -11,7 +12,7 @@ block content
             h1.kv-title Hi, I’M 
               span.kv-title-point NJ
             p.kv-sec-title UI & WEB DESIGNER
-            p.kv-desc 擁有超過 5 年的網頁 UI 設計與前端開發經驗，
+            p.kv-desc 擁有 5 年以上的網頁 UI 設計與前端開發經驗，
               br
               |並利用下班及假日時段接案與進修，不斷累積實務經驗與專案管理能力。
           .kv-deco-box
@@ -54,9 +55,9 @@ block content
                 img.code-right.animate.animate_fadeRight.animate_delay300(src="./images/img-s2-code.svg", alt="code")
                 img.about-visual.animate.animate_fadeLeft.animate_delay200(src="./images/img-s2-visual.svg", alt="NJ")
               ul.about-right 
-                li.about-text.animate.animate_fadeRight.animate_delay200 我是楠鈞(NJ)，目前任職於巴哈姆特電玩資訊站，擔任 UI Designer，負責全站介面設計與前端切版工作，涵蓋網頁與 App。工作內容包含介面設計規劃、網頁切版實作，以及針對舊有頁面進行優化與改版。曾參與的專案包括：首頁改版、電應板估價單功能介面設計、GNN 留言介面優化等。專案前期使用 Figma 進行設計，接著以 HTML 與 SCSS 切版，並搭配 jQuery 或 JavaScript 完成互動動畫與功能操作。此外，也與 iOS、Android 工程師協作，設計並開發 App UI，確保設計一致性與良好使用體驗。
-                li.about-text.animate.animate_fadeRight.animate_delay200 上一份工作則是任職於永豐銀行擔任程式設計人員，主要專注於前端開發。負責網銀、行銀及 App 前端 Webview 切版、維運和改版。工作中常使用 Pug 與 Sass 製作模版，提高開發效率，並利用 jQuery、GSAP 撰寫互動特效。同時也運用 Prepros、Gulp 進行開發環境配置與資源打包，透過 Git 進行版本管理與團隊協作。參與多項大型專案，包括：雲端信貸、大咖 App、新大戶 App 等，與跨部門團隊協作推動專案進行。
-                li.about-text.about-text.animate.animate_fadeRight.animate_delay300 近年來，除了日常工作之外，我也積極利用下班及假日時段接案與進修網頁相關課程，藉此提升工作效率與專案管理能力。此外，透過學習 vue 前端框架與動畫技術，並將所學應用於專案，有效促進團隊協作與溝通的順暢。
+                li.about-text.animate.animate_fadeRight.animate_delay200 HELLO 我是楠鈞(NJ)，目前任職於巴哈姆特電玩資訊站，擔任 UI Designer，負責全站介面設計與切版工作，範圍涵蓋網頁與 App，以及針對舊有頁面進行優化與改版。曾參與的專案包括：首頁改版、電應板估價單功能介面設計、GNN 留言介面優化等。專案前期使用 Figma 進行設計，接著以 HTML 與 SCSS 切版，並搭配 jQuery 或 JavaScript 完成互動動畫與功能操作。此外，也與 iOS、Android 工程師協作，設計並開發 App UI，確保設計一致性與良好使用體驗。
+                li.about-text.animate.animate_fadeRight.animate_delay200 上一份工作則是任職於永豐銀行擔任程式設計人員，主要專注於前端開發。負責網銀、行銀及 App 前端 Webview 切版、維運和改版。工作中常使用 Pug 與 Sass 製作模版，提高開發效率，並利用 jQuery、GSAP 撰寫互動操作與動畫。同時也運用 Prepros、Gulp 進行開發環境配置與資源打包，透過 Git 進行版本管理與團隊協作。參與多項大型專案，包括：雲端信貸、大咖 App、新大戶 App 等，與跨部門團隊協作推動專案進行。
+                li.about-text.about-text.animate.animate_fadeRight.animate_delay300 近年來，除了日常工作之外，我也積極利用下班及假日時段接案與進修網頁相關課程，藉此提升工作效率與專案管理能力。此外，透過學習 vue 前端框架與動畫技術，並將所學應用於專案，有效促進團隊協作與溝通的順暢度。
                 li.about-tag-box.about-text.animate.animate_fadeRight.animate_delay500
                   .tag #天蠍座
                   .tag #INFJ
@@ -77,7 +78,7 @@ block content
                         span.company (旺普網路資訊公司)
                     .experience-right
                       .experience-date 2023/10 - NOW
-                      .toggle.toggle-trigger
+                      .toggle.toggle-trigger.rotate
                 ol.experience-job-row
                   li.experience-job-item.title 工作內容：
                   li.experience-job-item 1.新首頁改版 (HTML、Scss、jQuery 切版)
@@ -222,8 +223,8 @@ block content
                     .border.border-after
                 .swiper-slide
                   a.project-item(href="https://bank.sinopac.com/sinopacBT/webevents/2308_trust/" target="_blank") 
-                    img.project-img(src="./images/img-marketing-03.jpg", alt="永豐銀行 信託大冒險")
-                    h3.project-name 永豐銀行 - 信託大冒險
+                    img.project-img(src="./images/img-marketing-03.jpg", alt="信託大冒險")
+                    h3.project-name 信託大冒險
                     .border.border-before
                     .border.border-after
                 .swiper-slide

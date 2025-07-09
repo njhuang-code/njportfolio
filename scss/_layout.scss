@@ -116,6 +116,10 @@
 
 @media (max-width: ($mbrwd-breakpoint* 1px)) {
 
+  .container {
+    padding: 0 vwm(16px * 2);
+  }
+
   .btn {
     @include size(vwm(160px * 2), vwm(48px * 2));
     border-radius: vwm(99px);

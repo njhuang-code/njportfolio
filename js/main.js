@@ -1,54 +1,32 @@
 function gsapAni() {
-
-  gsap.timeline({
-    // delay: 0.7,
-    onComplete: function () {
-      gsap.timeline({ delay: 0.5, repeat: -1, repeatDelay: 2 });
-    },
-    onStart: function () {
-      window.scrollTo(0, 0);
-    },
-  })
-  .addLabel("kvStart")
-  .from(".kv-title", {
-    ease: "elastic.out(1, 0.35)",
-    duration: 0.8,
-    clearProps: "all",
-  }, "kvStart+=0.5")
-  .from(".kv-sec-title", {
-    duration: 1.85,
-    ease: "elastic.out(1, 0.35)",
-    clearProps: "all",
-  }, "kvStart+=1")
-  .from(".kv-desc", {
-    y: '-100%',
-    ease: "elastic.out(1, 0.35)",
-    duration: 1.25,
-    clearProps: 'all',
-  }, "kvStart+=1.5")
-  .from(".kv-deco-box > .skill", {
-    ease: "elastic.out(1, 0.35)",
-    duration: 1.5,
-    clearProps: "all",
-    stagger: {
-      each: 0.2,
-      from: "random",
-    }
-  }, "kvStart+=0.5")
-  .from(".kv-visual", {
-    y: '-100%',
-    ease: "elastic.out(1, 0.35)",
-    duration: 1.5,
-    clearProps: 'all',
-  }, "kvStart+=0.8")
-  .from(".kv-scroll", {
-    y: '-100%',
-    autoAlpha: 0,
-    ease: "elastic.out(1, 0.35)",
-    duration: 1.5,
-    clearProps: 'all',
-    immediateRender: false
-  }, "kvStart+=1.25");
+  gsap
+    .timeline({
+      delay: 0.7,
+      onComplete: function () {
+        gsap
+          .timeline({ delay: 0.5, repeat: -1, repeatDelay: 2, opacity: 1, })
+          .from(
+            ".kv-deco-box > .skill",
+            {
+              opacity: 0,
+              scale: 0,
+              ease: "elastic.out(1, 0.35)",
+              duration: 1.5,
+              stagger: 0.8,
+              clearProps: "all",
+              stagger: {
+                each: 0.2,
+                from: "random",
+              },
+            
+            },
+            "kvStart+=0.5"
+          )
+      },
+      onStart: function () {
+        window.scrollTo(0, 0);
+      },
+    })
 }
 
 
@@ -89,12 +67,18 @@ document.querySelectorAll('.project-slide').forEach((el, index) => {
       768: {
         slidesPerView: 2.25,
         navigation: {
-          nextEl: el.querySelector('.swiper-button-next'),
-          prevEl: el.querySelector('.swiper-button-prev'),
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          enabled: true,
         },
       },
       1200: {
         slidesPerView: 3.25,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          enabled: true,
+        },
       },
     },
 
@@ -143,9 +127,6 @@ $(document).ready(function () {
     $(this).toggleClass('rotate');
   });
 });
-
-
-
 
 
 $(function () {
